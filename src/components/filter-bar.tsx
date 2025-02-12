@@ -1,5 +1,5 @@
 import {Button} from "@/components/ui/button.tsx";
-import {useDataStore} from "@/store/useDataStore.ts";
+import {DataStore, useDataStore} from "@/store/useDataStore.ts";
 
 export default function FilterBar() {
     return (
@@ -11,9 +11,7 @@ export default function FilterBar() {
     )
 }
 
-function _Button({children, filter}: {children: string, filter: string}) {
-
+function _Button({children, filter}: {children: string, filter: DataStore['filterBy']}) {
     const {filterByField} = useDataStore();
-
     return <Button onClick={() => filterByField(filter)} className={'hover:cursor-pointer h-6 rounded-xl'} variant={'ghost'} size={'sm'}>{children}</Button>
 }

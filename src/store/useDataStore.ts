@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import {appData, Items} from "@/data/data.ts";
 
-interface DataStore {
+export interface DataStore {
     data: Items;
     filteredData: Items | Record<string, Items>;
     filterBy: "author" | "period" | "motive" | null;
