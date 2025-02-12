@@ -1,18 +1,22 @@
-type AppData = {
-    [key: string]: {
-        author: string;
-        epoka: string;
-        questions: {
-            motive: string;
-            question: string;
-        }[] | null
-    }
+export type Item = {
+    id: number;
+    title: string;
+    author: string | null;
+    period: string;
+    questions: {
+        motive: string;
+        question: string;
+    }[] | null
 }
 
-export const appData: AppData = {
-    "Biblia": {
-        author: "",
-        epoka: "Starożytność",
+export type Items = Item[]
+
+export const appData: Items = [
+    {
+        id: 1,
+        title: "Biblia",
+        author: null,
+        period: "Starożytność",
         questions: [
             {
                 "motive": "Cierpienie niezawinione",
@@ -28,9 +32,11 @@ export const appData: AppData = {
             }
         ]
     },
-    "Mitologia (cz. I Grecja)": {
+    {
+        id: 2,
+        title: "Mitologia (cz. I Grecja)",
         "author": "Jan Parandowski",
-        "epoka": "Starożytność (opracowanie XX w.)",
+        "period": "Starożytność",
         "questions": [
             {
                 "motive": "Poświęcenie w imię wyższych wartości",
@@ -46,9 +52,11 @@ export const appData: AppData = {
             }
         ]
     },
-    "Iliada": {
+    {
+        id: 3,
+        title: "Iliada",
         "author": "Homer",
-        "epoka": "Starożytność",
+        "period": "Starożytność",
         "questions": [
             {
                 "motive": "Heroizm",
@@ -56,9 +64,11 @@ export const appData: AppData = {
             }
         ]
     },
-    "Antygona": {
+    {
+        id: 4,
+        title: "Antygona",
         "author": "Sofokles",
-        "epoka": "Starożytność",
+        "period": "Starożytność",
         "questions": [
             {
                 "motive": "Konflikt racji moralnych",
@@ -70,9 +80,11 @@ export const appData: AppData = {
             }
         ]
     },
-    "Rozmowa Mistrza Polikarpa ze Śmiercią": {
+    {
+        id: 5,
+        title: "Rozmowa Mistrza Polikarpa ze Śmiercią",
         "author": "",
-        "epoka": "Średniowiecze",
+        "period": "Średniowiecze",
         "questions": [
             {
                 "motive": "Taniec śmierci",
@@ -80,9 +92,11 @@ export const appData: AppData = {
             }
         ]
     },
-    "Pieśń o Rolandzie": {
+    {
+        id: 6,
+        title: "Pieśń o Rolandzie",
         "author": "",
-        "epoka": "Średniowiecze",
+        "period": "Średniowiecze",
         "questions": [
             {
                 "motive": "Etos rycerski",
@@ -90,9 +104,11 @@ export const appData: AppData = {
             }
         ]
     },
-    "Makbet": {
+    {
+        id: 7,
+        "title": "Makbet",
         "author": "William Szekspir",
-        "epoka": "Renesans",
+        "period": "Renesans",
         "questions": [
             {
                 "motive": "Moralna odpowiedzialność za czyny",
@@ -108,4 +124,4 @@ export const appData: AppData = {
             }
         ]
     }
-}
+]
