@@ -1,18 +1,39 @@
 import { create } from "zustand";
 import {appData, Items} from "@/data/data.ts";
 
+export type Status = "inProgress" | "learned" | "review" | "notStarted";
+
 export interface DataStore {
     data: Items;
     filteredData: Record<string, Items> | null;
     filterBy: "author" | "period" | "motive" | null;
     filterByField: (field: "author" | "period" | "motive" | null) => void;
+    statuses: Record<string, Status>;
+    setStatus: (id: number, status: Status) => void;
+    loadStatuses: () => void;
 }
 
-export const useDataStore = create<DataStore>((set) => ({
-    data: appData.sort((a,b) => a.title.localeCompare(b.title)),
-    filteredData: null,
-    filterBy: null,
-    filterByField: (field) =>
+export const useDataStore = create<DataStore>((set) => {
+
+    const storedStatuses = JSON.parse(localStorage.getItem("statuses") || "{}");
+
+    return {
+        data: appData.sort((a,b) => a.title.localeCompare(b.title)),
+        filteredData: null,
+        filterBy: null,
+        statuses: storedStatuses,
+        setStatus: (id, status) => {
+            set((state) => {
+                const updatedStatuses = { ...state.statuses, [id]: status };
+                localStorage.setItem("learningStatuses", JSON.stringify(updatedStatuses));
+                return { statuses: updatedStatuses };
+            });
+        },
+        loadStatuses: () => {
+            const stored = JSON.parse(localStorage.getItem("learningStatuses") || "{}");
+            set({ statuses: stored });
+        },
+        filterByField: (field) =>
         set((state) => ({
             filterBy: field,
             filteredData: field
@@ -30,5 +51,6 @@ export const useDataStore = create<DataStore>((set) => ({
                     return acc;
                 }, {} as Record<string, Items>)
                 : null,
-        })),
-}));
+  }))
+  }
+});
