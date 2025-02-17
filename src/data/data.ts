@@ -1,8 +1,14 @@
 export type Item = {
     id: number;
     title: string;
+    description?: string;
     author: string | null;
     period: string;
+    externalResources?: {
+        title: string;
+        url: string;
+        type?: "video" | "article"
+    }[]
     questions: {
         motive: string;
         question: string;
@@ -16,7 +22,15 @@ export const appData: Items = [
         id: 1,
         title: "Biblia",
         author: null,
+        description: "Zbiór ksiąg religijnych judaizmu i chrześcijaństwa. Składa się z dwóch części: Starego i Nowego Testamentu. Biblia jest jednym z najważniejszych dzieł literatury światowej. Zawiera m.in. opowieści o stworzeniu świata, historię Izraela, życie i nauczanie Jezusa Chrystusa.",
         period: "Starożytność",
+        externalResources: [
+            {
+                title: "Księga Hioba - omówienie",
+                url: "https://www.youtube.com/watch?v=uTo5Myd_M0w",
+                type: "video",
+            }
+        ],
         questions: [
             {
                 "motive": "Cierpienie niezawinione",

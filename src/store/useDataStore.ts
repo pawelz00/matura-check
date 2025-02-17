@@ -3,14 +3,14 @@ import {appData, Items} from "@/data/data.ts";
 
 export interface DataStore {
     data: Items;
-    filteredData: Items | Record<string, Items>;
+    filteredData: Record<string, Items> | null;
     filterBy: "author" | "period" | "motive" | null;
     filterByField: (field: "author" | "period" | "motive" | null) => void;
 }
 
 export const useDataStore = create<DataStore>((set) => ({
-    data: appData,
-    filteredData: appData,
+    data: appData.sort((a,b) => a.title.localeCompare(b.title)),
+    filteredData: null,
     filterBy: null,
     filterByField: (field) =>
         set((state) => ({
@@ -29,6 +29,6 @@ export const useDataStore = create<DataStore>((set) => ({
                     }
                     return acc;
                 }, {} as Record<string, Items>)
-                : state.data,
+                : null,
         })),
 }));
