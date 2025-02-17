@@ -6,7 +6,7 @@ import { useFiltersStore } from "@/store/useFiltersStore.ts";
 import { statusesObj } from "@/constants/statusesObject.ts";
 
 export default function Navbar() {
-  const { view, setView } = useFiltersStore();
+  const { view, setView, status, setStatus } = useFiltersStore();
 
   return (
     <div className={"flex flex-col gap-y-6 w-1/2 items-center rounded-xl py-6"}>
@@ -35,10 +35,16 @@ export default function Navbar() {
           {Object.entries(statusesObj).map(([key, value]) => {
             return (
               <Button
+                onClick={() => {
+                  setStatus(status === value.status ? null : value.status);
+                }}
                 key={key}
                 variant={"ghost"}
                 size={"icon"}
-                className={cn("size-6 rounded-xl cursor-pointer")}
+                className={cn(
+                  "size-6 rounded-full cursor-pointer",
+                  status === value.status && "bg-accent text-accent-foreground",
+                )}
               >
                 <value.icon className={"size-5"} />
               </Button>
@@ -48,7 +54,7 @@ export default function Navbar() {
             onClick={() => {
               setView(view === "list" ? "grid" : "list");
             }}
-            className={"size-6 items-center flex"}
+            className={"size-6 cursor-pointer"}
             variant={"ghost"}
             size={"icon"}
           >
