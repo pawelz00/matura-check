@@ -23,7 +23,7 @@ export default function Navbar() {
       </nav>
       <section
         className={
-          "flex justify-between items-center bg-white px-3 h-8 w-fit rounded-full gap-x-1 min-w-full border border-muted"
+          "flex justify-between items-center bg-white px-3 h-8 w-fit rounded-full gap-x-1 min-w-full border border-dashed border-muted"
         }
       >
         <div className={"flex gap-x-1 items-center"}>
@@ -31,7 +31,7 @@ export default function Navbar() {
           <ButtonFilter filter={"motive"}>Motyw</ButtonFilter>
           <ButtonFilter filter={"author"}>Autor</ButtonFilter>
         </div>
-        <div className={"flex gap-x-2"}>
+        <div className={"flex gap-x-2 items-center"}>
           {Object.entries(statusesObj).map(([key, value]) => {
             return (
               <Button
@@ -42,11 +42,11 @@ export default function Navbar() {
                 variant={"ghost"}
                 size={"icon"}
                 className={cn(
-                  "size-6 rounded-full cursor-pointer",
+                  "cursor-pointer size-6",
                   status === value.status && "bg-accent text-accent-foreground",
                 )}
               >
-                <value.icon className={"size-5"} />
+                <value.icon className={"size-4"} />
               </Button>
             );
           })}
@@ -54,11 +54,15 @@ export default function Navbar() {
             onClick={() => {
               setView(view === "list" ? "grid" : "list");
             }}
-            className={"size-6 cursor-pointer"}
+            className={"cursor-pointer size-6"}
             variant={"ghost"}
             size={"icon"}
           >
-            {view === "list" ? <GridIcon /> : <ListIcon />}
+            {view === "list" ? (
+              <GridIcon className={"size-4"} />
+            ) : (
+              <ListIcon className={"size-4"} />
+            )}
           </Button>
         </div>
       </section>
