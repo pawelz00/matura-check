@@ -4,6 +4,12 @@ import { cn } from "@/lib/utils.ts";
 import { GridIcon, ListIcon } from "lucide-react";
 import { useFiltersStore } from "@/store/useFiltersStore.ts";
 import { statusesObj } from "@/constants/statusesObject.ts";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip.tsx";
 
 export default function Navbar() {
   const { view, setView, status, setStatus } = useFiltersStore();
@@ -36,20 +42,32 @@ export default function Navbar() {
         <div className={"flex gap-x-2 items-center"}>
           {Object.entries(statusesObj).map(([key, value]) => {
             return (
-              <Button
-                onClick={() => {
-                  setStatus(status === value.status ? null : value.status);
-                }}
-                key={key}
-                variant={"ghost"}
-                size={"icon"}
-                className={cn(
-                  "cursor-pointer size-6",
-                  status === value.status && "bg-accent text-accent-foreground",
-                )}
-              >
-                <value.icon className={"size-4"} />
-              </Button>
+              <TooltipProvider key={key}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button
+                      onClick={() => {
+                        setStatus(
+                          status === value.status ? null : value.status,
+                        );
+                      }}
+                      key={key}
+                      variant={"ghost"}
+                      size={"icon"}
+                      className={cn(
+                        "cursor-pointer size-6",
+                        status === value.status &&
+                          "bg-accent text-accent-foreground",
+                      )}
+                    >
+                      <value.icon className={"size-4"} />
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{value.text}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             );
           })}
           <Button

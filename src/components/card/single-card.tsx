@@ -9,7 +9,7 @@ type SingleCardProps = {
 
 export default function SingleCard({ item }: SingleCardProps) {
   return (
-    <Card className="w-full transition-all hover:shadow-lg">
+    <Card className="w-full h-full transition-all hover:shadow-lg">
       <CardHead item={item} />
       <CardBody item={item} />
     </Card>

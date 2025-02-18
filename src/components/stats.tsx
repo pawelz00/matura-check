@@ -1,6 +1,7 @@
 import { useDataStore } from "@/store/useDataStore.ts";
 import { useMemo } from "react";
 import { Badge } from "@/components/ui/badge.tsx";
+import Counter from "@/components/counter.tsx";
 
 type Stats = {
   numberOfCompletedItems: number;
@@ -34,20 +35,25 @@ export default function Stats() {
   return (
     <section
       className={
-        "w-full text-sm flex divide-x items-center border rounded-full bg-white"
+        "w-full flex items-center border justify-between rounded-full bg-white"
       }
     >
-      <div className={"flex gap-x-2 items-center px-4 py-1.5"}>
-        <span>Lektury przyswojone:</span>
-        <Badge variant={"outline"}>{stats.numberOfCompletedItems}</Badge>
+      <div className={"flex divide-x text-sm"}>
+        <div className={"flex gap-x-2 items-center px-4 py-1.5"}>
+          <span>Lektury przyswojone:</span>
+          <Badge variant={"outline"}>{stats.numberOfCompletedItems}</Badge>
+        </div>
+        <div className={"flex gap-x-2 items-center px-4 py-1.5"}>
+          <span>Do powtórki:</span>
+          <Badge variant={"outline"}>{stats.review}</Badge>
+        </div>
+        <div className={"flex gap-x-2 items-center px-4 py-1.5"}>
+          <span>Do nauczenia:</span>
+          <Badge variant={"outline"}>{stats.notStarted}</Badge>
+        </div>
       </div>
-      <div className={"flex gap-x-2 items-center px-4 py-1.5"}>
-        <span>Do powtórki:</span>
-        <Badge variant={"outline"}>{stats.review}</Badge>
-      </div>
-      <div className={"flex gap-x-2 items-center px-4 py-1.5"}>
-        <span>Do nauczenia:</span>
-        <Badge variant={"outline"}>{stats.notStarted}</Badge>
+      <div className={"px-4"}>
+        <Counter />
       </div>
     </section>
   );
