@@ -9,7 +9,9 @@ export default function Navbar() {
   const { view, setView, status, setStatus } = useFiltersStore();
 
   return (
-    <div className={"flex flex-col gap-y-6 w-1/2 items-center rounded-xl py-6"}>
+    <div
+      className={"flex flex-col gap-y-6 w-full items-center rounded-xl py-6"}
+    >
       <nav>
         <ul
           className={

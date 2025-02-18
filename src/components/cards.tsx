@@ -15,7 +15,7 @@ export default function Cards() {
 
   if (!groupBy) {
     return (
-      <main className={cn("w-1/2 mt-12 items-center", classNames[view])}>
+      <main className={cn("w-full mt-6 items-center", classNames[view])}>
         {data
           .filter((item) => {
             if (status) {
@@ -31,7 +31,7 @@ export default function Cards() {
   }
 
   return (
-    <main className={"flex flex-col gap-12 w-1/2 mt-12 items-center"}>
+    <main className={"flex flex-col gap-12 w-full mt-6 items-center"}>
       {Object.entries(groupedData ?? {}).map(([key, value]) => {
         return (
           <CardGroup title={key} description={""}>
