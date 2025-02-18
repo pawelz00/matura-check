@@ -79,21 +79,21 @@ function ButtonFilter({
   filter,
 }: {
   children: string;
-  filter: DataStore["filterBy"];
+  filter: DataStore["groupBy"];
 }) {
-  const { filterByField, filterBy } = useDataStore();
+  const { groupByField, groupBy } = useDataStore();
   return (
     <Button
       onClick={() => {
-        if (filterBy === filter) {
-          filterByField(null);
+        if (groupBy === filter) {
+          groupByField(null);
         } else {
-          filterByField(filter);
+          groupByField(filter);
         }
       }}
       className={cn(
         "hover:cursor-pointer h-6 rounded-xl",
-        filterBy === filter && "bg-accent text-accent-foreground",
+        groupBy === filter && "bg-accent text-accent-foreground",
       )}
       variant={"ghost"}
       size={"sm"}
