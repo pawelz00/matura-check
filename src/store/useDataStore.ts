@@ -1,26 +1,40 @@
 import { create } from "zustand";
-import { appData, Items } from "@/data/data.ts";
+import { appData, Items, Questions } from "@/data/data.ts";
 
 export type Status = "inProgress" | "learned" | "review" | "notStarted";
 
 export interface DataStore {
   data: Items;
+  questionsData: Questions;
   groupedData: Record<string, Items> | null;
   groupBy: "author" | "period" | "motive" | null;
   groupByField: (field: "author" | "period" | "motive" | null) => void;
   statuses: Record<string, Status>;
+  questionsStatuses: Record<string, Status>;
   setStatus: (id: number, status: Status) => void;
   loadStatuses: () => void;
 }
 
 export const useDataStore = create<DataStore>((set) => {
   const storedStatuses = JSON.parse(localStorage.getItem("statuses") || "{}");
+  const storedQuestionStatuses = JSON.parse(
+    localStorage.getItem("questionStatuses") || "{}",
+  );
 
   return {
     data: appData.sort((a, b) => a.title.localeCompare(b.title)),
+    questionsData: appData
+      .map((el) => {
+        if (el.questions) {
+          return el.questions;
+        }
+        return [];
+      })
+      .flat(),
     groupedData: null,
     groupBy: null,
     statuses: storedStatuses,
+    questionsStatuses: storedQuestionStatuses,
     setStatus: (id, status) => {
       set((state) => {
         const updatedStatuses = { ...state.statuses, [id]: status };

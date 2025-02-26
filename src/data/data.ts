@@ -1,3 +1,11 @@
+export type Question = {
+  id: number;
+  motive: string;
+  question: string;
+};
+
+export type Questions = Question[];
+
 export type Item = {
   id: number;
   title: string;
@@ -9,13 +17,7 @@ export type Item = {
     url: string;
     type?: "video" | "article";
   }[];
-  questions:
-    | {
-        id: number;
-        motive: string;
-        question: string;
-      }[]
-    | null;
+  questions: Questions | null;
 };
 
 export type Items = Item[];

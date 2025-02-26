@@ -30,7 +30,9 @@ export default function CardBody({ item }: { item: Item }) {
           })}
         </div>
       </div>
+
       <Separator />
+
       <div className="space-y-2">
         <h3 className="text-sm font-medium text-card-foreground/70">Źródła</h3>
         <div className="text-sm ">
