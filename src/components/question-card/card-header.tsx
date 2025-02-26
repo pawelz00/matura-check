@@ -1,5 +1,5 @@
 import { CardHeader, CardTitle } from "@/components/ui/card.tsx";
-import { QuestionsData } from "@/components/question-cards.tsx";
+import { QuestionsData } from "@/store/useDataStore.ts";
 
 export default function CardHead({ item }: { item: QuestionsData }) {
   return (
