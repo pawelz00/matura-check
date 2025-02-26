@@ -1,11 +1,10 @@
 import { create } from "zustand";
-import { appData, Items, Questions } from "@/data/data.ts";
+import { appData, Items } from "@/data/data.ts";
 
 export type Status = "inProgress" | "learned" | "review" | "notStarted";
 
 export interface DataStore {
   data: Items;
-  questionsData: Questions;
   groupedData: Record<string, Items> | null;
   groupBy: "author" | "period" | "motive" | null;
   groupByField: (field: "author" | "period" | "motive" | null) => void;
@@ -23,14 +22,6 @@ export const useDataStore = create<DataStore>((set) => {
 
   return {
     data: appData.sort((a, b) => a.title.localeCompare(b.title)),
-    questionsData: appData
-      .map((el) => {
-        if (el.questions) {
-          return el.questions;
-        }
-        return [];
-      })
-      .flat(),
     groupedData: null,
     groupBy: null,
     statuses: storedStatuses,

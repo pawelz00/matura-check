@@ -17,7 +17,7 @@ export type Item = {
     url: string;
     type?: "video" | "article";
   }[];
-  questions: Questions | null;
+  questions: Questions;
 };
 
 export type Items = Item[];
