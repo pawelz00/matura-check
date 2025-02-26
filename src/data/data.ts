@@ -11,6 +11,7 @@ export type Item = {
   }[];
   questions:
     | {
+        id: number;
         motive: string;
         question: string;
       }[]
@@ -36,16 +37,19 @@ export const appData: Items = [
     ],
     questions: [
       {
+        id: 1,
         motive: "Cierpienie niezawinione",
         question:
           "Omów zagadnienie na podstawie znanych Ci fragmentów Księgi Hioba. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
+        id: 2,
         motive: "Niestałość świata",
         question:
           "Omów zagadnienie na podstawie znanych Ci fragmentów Księgi Koheleta. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
+        id: 3,
         motive: "Koniec świata",
         question:
           "Omów zagadnienie na podstawie znanych Ci fragmentów Apokalipsy św. Jana. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
@@ -61,16 +65,19 @@ export const appData: Items = [
     period: "Starożytność",
     questions: [
       {
+        id: 1,
         motive: "Poświęcenie w imię wyższych wartości",
         question:
           "Omów zagadnienie na podstawie Mitologii (cz. I Grecja) Jana Parandowskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
+        id: 2,
         motive: "Wina i kara",
         question:
           "Omów zagadnienie na podstawie Mitologii (cz. I Grecja) Jana Parandowskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
+        id: 3,
         motive: "Miłość silniejsza niż śmierć",
         question:
           "Omów zagadnienie na podstawie Mitologii (cz. I Grecja) Jana Parandowskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
@@ -86,6 +93,7 @@ export const appData: Items = [
     period: "Starożytność",
     questions: [
       {
+        id: 1,
         motive: "Heroizm",
         question:
           "Omów zagadnienie na podstawie znanych Ci fragmentów Iliady Homera. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
@@ -101,11 +109,13 @@ export const appData: Items = [
     period: "Starożytność",
     questions: [
       {
+        id: 1,
         motive: "Konflikt racji moralnych",
         question:
           "Omów zagadnienie na podstawie Antygony Sofoklesa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
+        id: 2,
         motive: "Człowiek wobec przeznaczenia",
         question:
           "Omów zagadnienie na podstawie Antygony Sofoklesa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
@@ -121,6 +131,7 @@ export const appData: Items = [
     period: "Średniowiecze",
     questions: [
       {
+        id: 1,
         motive: "Taniec śmierci",
         question:
           "Omów zagadnienie na podstawie znanych Ci fragmentów Rozmowy Mistrza Polikarpa ze Śmiercią. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
@@ -136,6 +147,7 @@ export const appData: Items = [
     period: "Średniowiecze",
     questions: [
       {
+        id: 1,
         motive: "Etos rycerski",
         question:
           "Omów zagadnienie na podstawie znanych Ci fragmentów Pieśni o Rolandzie. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
@@ -151,16 +163,19 @@ export const appData: Items = [
     period: "Renesans",
     questions: [
       {
+        id: 1,
         motive: "Moralna odpowiedzialność za czyny",
         question:
           "Omów zagadnienie na podstawie Makbeta Williama Szekspira. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
+        id: 2,
         motive: "Czy człowiek decyduje o własnym losie?",
         question:
           "Omów zagadnienie na podstawie Makbeta Williama Szekspira. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
+        id: 3,
         motive: "Wpływ władzy na człowieka",
         question:
           "Omów zagadnienie na podstawie Makbeta Williama Szekspira. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
