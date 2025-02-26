@@ -11,11 +11,17 @@ type Stats = {
   notStarted: number;
 };
 
-export default function Stats() {
-  const { statuses } = useDataStore();
+export type StatsProps = {
+  mode?: "questions" | "default";
+};
+
+export default function Stats({ mode = "default" }: StatsProps) {
+  const { statuses, questionsStatuses } = useDataStore();
 
   const stats: Stats = useMemo(() => {
-    return Object.values(statuses).reduce(
+    return Object.values(
+      mode === "default" ? statuses : questionsStatuses,
+    ).reduce(
       (acc, status) => {
         if (status === "learned") {
           acc.learned += 1;
@@ -35,7 +41,7 @@ export default function Stats() {
         inProgress: 0,
       },
     );
-  }, [statuses]);
+  }, [statuses, questionsStatuses]);
 
   return (
     <section

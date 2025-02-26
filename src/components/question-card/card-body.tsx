@@ -1,5 +1,5 @@
 import { CardContent } from "@/components/ui/card.tsx";
-import { QuestionsData } from "@/store/useDataStore.ts";
+import { QuestionsData, useDataStore } from "@/store/useDataStore.ts";
 import { statusesObj } from "@/constants/statusesObject.ts";
 import {
   Tooltip,
@@ -11,6 +11,12 @@ import { Button } from "@/components/ui/button.tsx";
 import { cn } from "@/lib/utils.ts";
 
 export default function CardBody({ item }: { item: QuestionsData }) {
+  const { questionsStatuses, setQuestionsStatus } = useDataStore();
+
+  function questionStatus(questionId: number) {
+    return questionsStatuses[`${item.id}-${questionId}`];
+  }
+
   return item.questions.map((q) => (
     <CardContent className="mt-6 space-y-6 flex w-full items-center justify-between">
       <div>
@@ -27,13 +33,13 @@ export default function CardBody({ item }: { item: QuestionsData }) {
                     variant={"ghost"}
                     size={"icon"}
                     className={cn(
-                      // statuses[item.id] === value.status &&
-                      // "bg-primary text-primary-foreground",
+                      questionStatus(q.id) === value.status &&
+                        "bg-primary text-primary-foreground",
                       "hover:bg-primary hover:text-primary-foreground hover:cursor-pointer",
                     )}
-                    // onClick={() => {
-                    //     setStatus(item.id, value.status);
-                    // }}
+                    onClick={() => {
+                      setQuestionsStatus(item.id, q.id, value.status);
+                    }}
                   >
                     <value.icon className={"size-4"} />
                   </Button>

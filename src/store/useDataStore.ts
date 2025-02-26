@@ -18,6 +18,11 @@ export interface DataStore {
   statuses: Record<string, Status>;
   questionsStatuses: Record<string, Status>;
   setStatus: (id: number, status: Status) => void;
+  setQuestionsStatus: (
+    lectureId: number,
+    questionId: number,
+    status: Status,
+  ) => void;
   loadStatuses: () => void;
 }
 
@@ -29,6 +34,7 @@ export const useDataStore = create<DataStore>((set) => {
 
   return {
     data: appData.sort((a, b) => a.title.localeCompare(b.title)),
+
     questionsData: appData
       .filter((el) => el.questions)
       .map((el) => ({
@@ -38,10 +44,13 @@ export const useDataStore = create<DataStore>((set) => {
         questions: el.questions,
       }))
       .flat(),
+
     groupedData: null,
     groupBy: null,
+
     statuses: storedStatuses,
     questionsStatuses: storedQuestionStatuses,
+
     setStatus: (id, status) => {
       set((state) => {
         const updatedStatuses = { ...state.statuses, [id]: status };
@@ -52,12 +61,31 @@ export const useDataStore = create<DataStore>((set) => {
         return { statuses: updatedStatuses };
       });
     },
+
+    setQuestionsStatus: (lectureId, questionId, status) => {
+      set((state) => {
+        const updatedStatuses = {
+          ...state.questionsStatuses,
+          [`${lectureId}-${questionId}`]: status,
+        };
+        localStorage.setItem(
+          "questionStatuses",
+          JSON.stringify(updatedStatuses),
+        );
+        return { questionsStatuses: updatedStatuses };
+      });
+    },
+
     loadStatuses: () => {
       const stored = JSON.parse(
         localStorage.getItem("learningStatuses") || "{}",
       );
-      set({ statuses: stored });
+      const storedQuestions = JSON.parse(
+        localStorage.getItem("questionStatuses") || "{}",
+      );
+      set({ statuses: stored, questionsStatuses: storedQuestions });
     },
+
     groupByField: (field) =>
       set((state) => ({
         groupBy: field,
