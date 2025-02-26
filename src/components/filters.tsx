@@ -22,8 +22,8 @@ export default function Filters() {
     >
       <div className={"flex gap-x-1 items-center"}>
         <ButtonFilter filter={"period"}>Epoka</ButtonFilter>
-        <ButtonFilter filter={"motive"}>Motyw</ButtonFilter>
         <ButtonFilter filter={"author"}>Autor</ButtonFilter>
+        <ButtonFilter filter={"motive"}>Motyw</ButtonFilter>
       </div>
       <div className={"flex gap-x-3 items-center"}>
         {Object.entries(statusesObj).map(([key, value]) => {

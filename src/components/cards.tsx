@@ -33,18 +33,22 @@ export default function Cards() {
   return (
     <main className={"flex flex-col gap-12 w-full mt-6 items-center"}>
       {Object.entries(groupedData ?? {}).map(([key, value]) => {
+        const valueData = value.filter((item) => {
+          if (status) {
+            return statuses[item.id] === status;
+          }
+          return true;
+        });
+
+        if (!valueData.length) {
+          return null;
+        }
+
         return (
           <CardGroup key={key} title={key}>
-            {value
-              .filter((item) => {
-                if (status) {
-                  return statuses[item.id] === status;
-                }
-                return true;
-              })
-              .map((item) => (
-                <SingleCard key={item.id} item={item} />
-              ))}
+            {valueData.map((item) => (
+              <SingleCard key={item.id} item={item} />
+            ))}
           </CardGroup>
         );
       })}
