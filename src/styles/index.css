@@ -4,9 +4,6 @@
 
 body {
   box-sizing: border-box;
-  min-height: 100vh;
-  min-width: 100vw;
-  padding: 3rem;
 }
 
 * {

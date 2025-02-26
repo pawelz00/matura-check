@@ -33,28 +33,15 @@ export default function Stats() {
   }, [statuses]);
 
   return (
-    <section
-      className={
-        "w-full flex items-center border justify-between rounded-full bg-white"
-      }
-    >
-      <div className={"flex divide-x text-sm"}>
-        <div className={"flex gap-x-2 items-center px-4 py-1.5"}>
-          <span>Lektury przyswojone:</span>
-          <Badge variant={"outline"}>{stats.numberOfCompletedItems}</Badge>
-        </div>
-        <div className={"flex gap-x-2 items-center px-4 py-1.5"}>
-          <span>Do powtórki:</span>
-          <Badge variant={"outline"}>{stats.review}</Badge>
-        </div>
-        <div className={"flex gap-x-2 items-center px-4 py-1.5"}>
-          <span>Do nauczenia:</span>
-          <Badge variant={"outline"}>{stats.notStarted}</Badge>
-        </div>
+    <section className={"w-full flex items-center justify-between p-3"}>
+      <div className={"flex text-sm gap-x-3"}>
+        <Badge variant={"outline"}>
+          Lektury przyswojone: {stats.numberOfCompletedItems}
+        </Badge>
+        <Badge variant={"outline"}>Do powtórki: {stats.review}</Badge>
+        <Badge variant={"outline"}>Do nauczenia: {stats.notStarted}</Badge>
       </div>
-      <div className={"px-4"}>
-        <Counter />
-      </div>
+      <Counter />
     </section>
   );
 }

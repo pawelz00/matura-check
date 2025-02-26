@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { Badge } from "@/components/ui/badge.tsx";
+import { Clock2Icon } from "lucide-react";
 
 export default function Counter() {
   const calculateDays = () => {
@@ -22,6 +24,12 @@ export default function Counter() {
   }, []);
 
   return (
-    <span className={"text-sm font-medium"}>{daysLeft} dni do matury</span>
+    <Badge
+      variant={"default"}
+      className={"font-medium flex items-center gap-x-1.5"}
+    >
+      <Clock2Icon />
+      <span className={"text-xs"}>{daysLeft} dni do matury</span>
+    </Badge>
   );
 }
