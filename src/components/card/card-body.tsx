@@ -8,14 +8,14 @@ export default function CardBody({ item }: { item: Item }) {
   return (
     <CardContent className="mt-6 space-y-6">
       <div className="space-y-2">
-        <h3 className="text-sm font-medium text-card-foreground/70">
+        <h3 className="text-md font-medium text-card-foreground">
           Krótki opis dzieła
         </h3>
-        <p className="text-sm text-slate-600">{item.description}</p>
+        <p className="text-sm text-card-foreground/65">{item.description}</p>
       </div>
 
       <div className="space-y-2">
-        <h3 className="text-sm font-medium text-card-foreground/70">Motywy</h3>
+        <h3 className="text-md font-medium text-card-foreground">Motywy</h3>
         <div className="flex flex-wrap gap-2">
           {item?.questions?.map((item) => {
             return (
@@ -34,7 +34,7 @@ export default function CardBody({ item }: { item: Item }) {
       <Separator />
 
       <div className="space-y-2">
-        <h3 className="text-sm font-medium text-card-foreground/70">Źródła</h3>
+        <h3 className="text-md font-medium text-card-foreground">Źródła</h3>
         <div className="text-sm ">
           <div>
             {item?.externalResources?.map((item) => {

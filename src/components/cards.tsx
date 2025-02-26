@@ -34,7 +34,7 @@ export default function Cards() {
     <main className={"flex flex-col gap-12 w-full mt-6 items-center"}>
       {Object.entries(groupedData ?? {}).map(([key, value]) => {
         return (
-          <CardGroup title={key} description={""}>
+          <CardGroup key={key} title={key}>
             {value
               .filter((item) => {
                 if (status) {

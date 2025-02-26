@@ -3,30 +3,23 @@ import { useFiltersStore } from "@/store/useFiltersStore.ts";
 
 interface CardGroupProps {
   title: string;
-  description: string;
   bgColor?: string;
   children: React.ReactNode;
 }
 
-function GroupHeader({
-  title,
-  description,
-}: {
-  title: string;
-  description: string;
-}) {
+function GroupHeader({ title }: { title: string }) {
   return (
     <>
-      <h2 className="text-xl font-bold tracking-wide ">{title}</h2>
-      <p className="text-sm text-primary/70">{description}</p>
+      <h2 className="text-2xl font-bold tracking-normal text-card-foreground/80 border-b">
+        {title}
+      </h2>
     </>
   );
 }
 
 export function CardGroup({
   title,
-  description,
-  bgColor = "bg-secondary/20",
+  bgColor = "bg-card",
   children,
 }: CardGroupProps) {
   const { view } = useFiltersStore();
@@ -37,10 +30,8 @@ export function CardGroup({
   };
 
   return (
-    <div
-      className={`rounded-lg ${bgColor} py-8 px-12 space-y-6 transition-all hover:shadow-md w-full`}
-    >
-      <GroupHeader title={title} description={description} />
+    <div className={`rounded-lg ${bgColor} p-6 space-y-6 shadow-lg w-full`}>
+      <GroupHeader title={title} />
       <div className={classNames[view]}>{children}</div>
     </div>
   );
