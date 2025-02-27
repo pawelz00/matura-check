@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card.tsx";
-import CardHead from "@/components/question-card/card-header.tsx";
-import CardBody from "@/components/question-card/card-body.tsx";
+import CardHead from "@/components/cards/question-card/card-header.tsx";
+import CardBody from "@/components/cards/question-card/card-body.tsx";
 import { QuestionsData } from "@/store/useDataStore.ts";
 
 type SingleCardProps = {

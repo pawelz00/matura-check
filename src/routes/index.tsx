@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import InfoBar from "@/components/info-bar.tsx";
-import Cards from "@/components/cards.tsx";
+import Cards from "@/components/cards/cards.tsx";
 
 export const Route = createFileRoute("/")({
   component: Index,

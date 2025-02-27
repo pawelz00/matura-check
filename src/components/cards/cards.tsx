@@ -1,16 +1,16 @@
 import { useDataStore } from "@/store/useDataStore";
-import SingleCard from "@/components/card/single-card.tsx";
 import { useFiltersStore } from "@/store/useFiltersStore";
 import { cn } from "@/lib/utils.ts";
-import { CardGroup } from "@/components/card/card-group.tsx";
 import { useMemo } from "react";
 import { Items } from "@/data/data.ts";
-import EmptyState from "@/components/empty-state.tsx";
 import { classNames } from "@/constants/classes.ts";
 import {
   getCardsSearchFilterData,
   getCardsStatusFilterData,
 } from "@/lib/filters.ts";
+import EmptyState from "@/components/cards/empty-state.tsx";
+import SingleCard from "@/components/cards/card/single-card.tsx";
+import { CardGroup } from "@/components/cards/card/card-group.tsx";
 
 export default function Cards() {
   const { data, groupedData, groupBy, statuses } = useDataStore();
