@@ -1,8 +1,9 @@
 import { Badge } from "@/components/ui/badge.tsx";
-import { VideoIcon } from "lucide-react";
 import { Item } from "@/data/data.ts";
 import { Separator } from "@/components/ui/separator.tsx";
 import { CardContent } from "@/components/ui/card.tsx";
+import { ListIcon, VideoIcon } from "lucide-react";
+import { Button } from "@/components/ui/button.tsx";
 
 export default function CardBody({ item }: { item: Item }) {
   return (
@@ -36,7 +37,7 @@ export default function CardBody({ item }: { item: Item }) {
       <div className="space-y-2">
         <h3 className="text-md font-medium text-card-foreground">Źródła</h3>
         <div className="text-sm ">
-          <div>
+          <div className={"flex flex-col gap-1 w-fit"}>
             {item?.externalResources?.map((item) => {
               return (
                 <a
@@ -45,11 +46,21 @@ export default function CardBody({ item }: { item: Item }) {
                   rel={"noreferrer"}
                   key={item.url}
                   className={
-                    "flex gap-x-1.5 items-center text-md hover:underline"
+                    "flex gap-x-2 items-center text-md hover:underline"
                   }
                 >
-                  <span>{item.title}</span>
-                  <VideoIcon className={"size-5 text-card-foreground/50"} />
+                  <Button
+                    size={"icon"}
+                    variant={"outline"}
+                    className={"rounded-full border size-7"}
+                  >
+                    {item.type === "video" ? (
+                      <VideoIcon />
+                    ) : (
+                      <ListIcon className={"size-4"} />
+                    )}
+                  </Button>
+                  <span className={"text-sm"}>{item.title}</span>
                 </a>
               );
             })}

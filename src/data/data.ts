@@ -17,7 +17,7 @@ export type Item = {
     url: string;
     type?: "video" | "article";
   }[];
-  questions: Questions;
+  questions?: Questions;
 };
 
 export type Items = Item[];
@@ -85,6 +85,34 @@ export const appData: Items = [
           "Omów zagadnienie na podstawie Mitologii (cz. I Grecja) Jana Parandowskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
     ],
+    externalResources: [
+      {
+        title: "Mitologia grecka - Streszczenie na DlaUcznia.pl",
+        url: "https://www.dlaucznia.pl/lekcja/jezyk-polski,nauka-o-literaturze,antyk,antyk-lektury,jan-parandowski-mitologia-grecka-streszczenie",
+        type: "article",
+      },
+      {
+        title: "Streszczenie Mitologii Parandowskiego na Knowunity",
+        url: "https://knowunity.pl/knows/jzyk-polski-mitologia-jan-parandowski-streszczenia-mitw-be0f2a32-ff6f-4543-862e-5227a9cebf8b",
+        type: "article",
+      },
+      {
+        title: "Mitologia grecka - Streszczenie na Bryk.pl",
+        url: "https://www.bryk.pl/wypracowania/jezyk-polski/antyk-i-biblia/3228-streszczenie-najwazniejszych-mitow-na-podstawie-mitologii-jana-parandowskiego.html",
+        type: "article",
+      },
+      {
+        title:
+          "Mitologia J. Parandowski (tom I Grecja) - Streszczenie na YouTube",
+        url: "https://www.youtube.com/watch?v=BxgcEiU9q4g",
+        type: "video",
+      },
+      {
+        title: "Mitologia grecka - Najważniejsze mity na Edziecko.pl",
+        url: "https://www.edziecko.pl/starsze_dziecko/7,79351,29704677,mitologia-parandowski-najwazniejsze-mity-poznaj-ich-streszczenia.html",
+        type: "article",
+      },
+    ],
   },
   {
     id: 3,
@@ -99,6 +127,58 @@ export const appData: Items = [
         motive: "Heroizm",
         question:
           "Omów zagadnienie na podstawie znanych Ci fragmentów Iliady Homera. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+    ],
+    externalResources: [
+      {
+        title: "Opracowanie Iliady",
+        url: "https://poezja.org/wz/zbior/Iliada/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie Iliady",
+        url: "https://poezja.org/wz/interpretacja/3103/Iliada",
+        type: "article",
+      },
+      {
+        title: "Motywy literackie w Iliadzie",
+        url: "https://poezja.org/wz/interpretacja/3642/Iliada_motywy_literackie",
+        type: "article",
+      },
+      {
+        title: "Pojedynek Hektora z Achillesem",
+        url: "https://poezja.org/wz/interpretacja/5881/Pojedynek_Hektora_z_Achillesem_streszczenie_i_opis",
+        type: "article",
+      },
+      {
+        title: "Bohaterowie Iliady",
+        url: "https://poezja.org/wz/interpretacja/8119/Iliada_bohaterowie",
+        type: "article",
+      },
+      {
+        title: "Iliada - Streszczenie krótkie na Bryk.pl",
+        url: "https://www.bryk.pl/lektury/homer/iliada.streszczenie-krotkie",
+        type: "article",
+      },
+      {
+        title: "Iliada - Streszczenie i cechy eposu",
+        url: "https://www.youtube.com/watch?v=a7jIu9mM3tw",
+        type: "video",
+      },
+      {
+        title: "Iliada - Streszczenie eposu",
+        url: "https://www.youtube.com/watch?v=OMdvJyRJNq4",
+        type: "video",
+      },
+      {
+        title: "Homer „Iliada” - Streszczenie i opracowanie w pigułce",
+        url: "https://www.youtube.com/watch?v=kAWph2o3KjM",
+        type: "video",
+      },
+      {
+        title: "Streszczenie z grubsza... HOMER - ILIADA",
+        url: "https://www.youtube.com/watch?v=IjzPIfVCAas",
+        type: "video",
       },
     ],
   },
@@ -123,6 +203,38 @@ export const appData: Items = [
           "Omów zagadnienie na podstawie Antygony Sofoklesa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
     ],
+    externalResources: [
+      {
+        title: "AleKlasa",
+        url: "https://aleklasa.pl/liceum/c300-lektury/antygona-tragedia",
+        type: "article",
+      },
+      {
+        title: "Opracowanie szczegółowe",
+        url: "https://www.bryk.pl/lektury/sofokles/antygona.problematyka",
+        type: "article",
+      },
+      {
+        title: "Antygona - Streszczenie",
+        url: "https://www.dlaucznia.pl/lekcja/jezyk-polski,nauka-o-literaturze,antyk,antyk-lektury,sofokles-antygona-streszczenie",
+        type: "article",
+      },
+      {
+        title: "Antygona - Streszczenie",
+        url: "https://poezja.org/wz/interpretacja/3603/Antygona_streszczenie",
+        type: "article",
+      },
+      {
+        title: "Antygona - Krótkie streszczenie",
+        url: "https://klp.pl/antygona/a-11088.html",
+        type: "article",
+      },
+      {
+        title: "Streszczenie i opracowanie",
+        url: "https://www.youtube.com/watch?v=zgE439C3dO8&ab_channel=Maturanamaksa%21",
+        type: "video",
+      },
+    ],
   },
   {
     id: 5,
@@ -139,6 +251,33 @@ export const appData: Items = [
           "Omów zagadnienie na podstawie znanych Ci fragmentów Rozmowy Mistrza Polikarpa ze Śmiercią. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
     ],
+    externalResources: [
+      {
+        title: "Streszczenie szczegółowe",
+        url: "https://www.bryk.pl/lektury/nieznany/rozmowa-mistrza-polikarpa-ze-smiercia.streszczenie-szczegolowe",
+        type: "article",
+      },
+      {
+        title: "Interpretacja utworu",
+        url: "https://www.bryk.pl/wypracowania/jezyk-polski/wiersze/1010696-rozmowa-mistrza-polikarpa-ze-smiercia-interpretacja-utworu.html",
+        type: "article",
+      },
+      {
+        title: "Streszczenie",
+        url: "https://poezja.org/wz/interpretacja/5085/Rozmowa_mistrza_Polikarpa_ze_Smiercia_streszczenie",
+        type: "article",
+      },
+      {
+        title: "Streszczenie i omówienie",
+        url: "https://babaodpolskiego.pl/rozmowa-mistrza-polikarpa-ze-smiercia-streszczenie-i-omowienie/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na YouTube",
+        url: "https://www.youtube.com/watch?v=T-w5nxDTYZ8",
+        type: "video",
+      },
+    ],
   },
   {
     id: 6,
@@ -153,6 +292,33 @@ export const appData: Items = [
         motive: "Etos rycerski",
         question:
           "Omów zagadnienie na podstawie znanych Ci fragmentów Pieśni o Rolandzie. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+    ],
+    externalResources: [
+      {
+        title: "Streszczenie szczegółowe na Bryk.pl",
+        url: "https://www.bryk.pl/lektury/nieznany/piesn-o-rolandzie.streszczenie-krotkie",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na Setkazpolaka.pl",
+        url: "https://setkazpolaka.pl/piesn-o-rolandzie-streszczenie/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na Epoki-literackie.pl",
+        url: "https://www.epoki-literackie.pl/sredniowiecze/piesn-o-rolandzie-streszczenie/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie i opracowanie na YouTube",
+        url: "https://www.youtube.com/watch?v=8f-1KLoDM2g",
+        type: "video",
+      },
+      {
+        title: "Streszczenie i opracowanie na YouTube",
+        url: "https://www.youtube.com/watch?v=R7MisZ31sgc",
+        type: "video",
       },
     ],
   },
@@ -183,5 +349,110 @@ export const appData: Items = [
           "Omów zagadnienie na podstawie Makbeta Williama Szekspira. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
     ],
+    externalResources: [
+      {
+        title: "Makbet - Streszczenie szczegółowe na Bryk.pl",
+        url: "https://www.bryk.pl/lektury/william-szekspir/makbet.streszczenie-szczegolowe",
+        type: "article",
+      },
+      {
+        title: "Makbet - Streszczenie krótkie na KLP.pl",
+        url: "https://klp.pl/makbet/a-5944.html",
+        type: "article",
+      },
+      {
+        title: "Makbet - Streszczenie na Poezja.org",
+        url: "https://poezja.org/wz/interpretacja/3655/Makbet_streszczenie",
+        type: "article",
+      },
+      {
+        title: "Makbet - Streszczenie i opracowanie w 5 minut na YouTube",
+        url: "https://www.youtube.com/watch?v=IiUcjRBh4dg",
+        type: "video",
+      },
+      {
+        title: "Makbet w 10 minut na YouTube",
+        url: "https://www.youtube.com/watch?v=Ii1tXCQQO7w",
+        type: "video",
+      },
+    ],
+  },
+  {
+    id: 9,
+    title: "Skąpiec",
+    author: "Molier",
+    period: "Barok",
+  },
+  {
+    id: 10,
+    title: "Satyra (wybrana)",
+    author: "Ignacy Krasicki",
+    period: "Oświecenie",
+  },
+  {
+    id: 11,
+    title: "Romantyczność",
+    author: "Adam Mickiewicz",
+    period: "Romantyzm",
+  },
+  {
+    id: 12,
+    title: "Dziady cz. III",
+    author: "Adam Mickiewicz",
+    period: "Romantyzm",
+  },
+  {
+    id: 13,
+    title: "Lalka",
+    author: "Bolesław Prus",
+    period: "Pozytywizm",
+  },
+  {
+    id: 14,
+    title: "Zbrodnia i kara",
+    author: "Fiodor Dostojewski",
+    period: "Realizm",
+  },
+  {
+    id: 15,
+    title: "Wesele",
+    author: "Stanisław Wyspiański",
+    period: "Młoda Polska",
+  },
+  {
+    id: 16,
+    title: "Przedwiośnie",
+    author: "Stefan Żeromski",
+    period: "Dwudziestolecie międzywojenne",
+  },
+  {
+    id: 17,
+    title: "Sklepy cynamonowe (opowiadanie)",
+    author: "Bruno Schulz",
+    period: "Dwudziestolecie międzywojenne",
+  },
+  {
+    id: 18,
+    title: "Dżuma",
+    author: "Albert Camus",
+    period: "Literatura współczesna",
+  },
+  {
+    id: 19,
+    title: "Rok 1984",
+    author: "George Orwell",
+    period: "Literatura współczesna",
+  },
+  {
+    id: 20,
+    title: "Tango",
+    author: "Sławomir Mrożek",
+    period: "Literatura współczesna",
+  },
+  {
+    id: 21,
+    title: "Zdążyć przed Panem Bogiem",
+    author: "Hanna Krall",
+    period: "Literatura współczesna",
   },
 ];
