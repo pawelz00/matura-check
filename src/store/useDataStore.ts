@@ -6,6 +6,7 @@ export type QuestionsData = {
   id: number;
   title: string;
   author: string | null;
+  period: string;
   questions: Questions;
 };
 
@@ -41,6 +42,7 @@ export const useDataStore = create<DataStore>((set) => {
         id: el.id,
         title: el.title,
         author: el.author,
+        period: el.period,
         questions: el.questions,
       }))
       .flat(),

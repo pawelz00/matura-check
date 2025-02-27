@@ -49,7 +49,8 @@ export function getQuestionsCardsSearchFilterData(
     .map((i) => {
       const matchesTitleOrAuthor =
         i.title.toLowerCase().includes(search.toLowerCase()) ||
-        i?.author?.toLowerCase().includes(search.toLowerCase());
+        i?.author?.toLowerCase().includes(search.toLowerCase()) ||
+        i.period.toLowerCase().includes(search.toLowerCase());
 
       const filteredQuestions = i.questions.filter((q) => {
         return (
