@@ -1,16 +1,18 @@
-import { useDataStore } from "@/store/useDataStore";
+import { QuestionsData, useDataStore } from "@/store/useDataStore";
 import { useFiltersStore } from "@/store/useFiltersStore";
 import { cn } from "@/lib/utils.ts";
 import SingleCard from "@/components/question-card/single-card.tsx";
 import { useMemo } from "react";
+import EmptyState from "@/components/empty-state.tsx";
 
 export default function QuestionCards() {
   const { questionsData, questionsStatuses } = useDataStore();
-  const { view, status } = useFiltersStore();
+  const { view, status, search } = useFiltersStore();
 
   const filteredQuestions = useMemo(() => {
+    let newData: QuestionsData[] = [...questionsData];
     if (status) {
-      return questionsData
+      newData = questionsData
         .map((i) => {
           return {
             ...i,
@@ -23,13 +25,34 @@ export default function QuestionCards() {
         })
         .filter((i) => i.questions.length);
     }
-    return questionsData;
-  }, [status]);
+    if (search.length > 0) {
+      newData = newData.map((i) => {
+        return {
+          ...i,
+          questions: i.questions.filter((q) => {
+            return (
+              q.question.toLowerCase().includes(search.toLowerCase()) ||
+              q.motive.toLowerCase().includes(search.toLowerCase())
+            );
+          }),
+        };
+      });
+    }
+    return newData.filter((i) => i.questions.length);
+  }, [status, search]);
 
   const classNames = {
     grid: "grid grid-cols-2 gap-6",
     list: "flex flex-col gap-6",
   };
+
+  if (filteredQuestions.length === 0) {
+    return (
+      <main className="w-full mt-6 items-center">
+        <EmptyState />
+      </main>
+    );
+  }
 
   return (
     <main className={cn("w-full mt-6 items-center", classNames[view])}>

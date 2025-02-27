@@ -50,7 +50,7 @@ export default function Stats({ mode = "default" }: StatsProps) {
       <div className={"flex text-sm gap-x-3"}>
         {Object.values(statusesObj).map((status) => (
           <Badge variant={"outline"} className={status.color} key={status.text}>
-            <status.icon size={16} />
+            <status.icon />
             <span>
               {status.text}: {stats?.[status.status] ?? 0}
             </span>
