@@ -1,5 +1,6 @@
 import type React from "react";
 import { useFiltersStore } from "@/store/useFiltersStore.ts";
+import { classNames } from "@/constants/classes.ts";
 
 interface CardGroupProps {
   title: string;
@@ -23,11 +24,6 @@ export function CardGroup({
   children,
 }: CardGroupProps) {
   const { view } = useFiltersStore();
-
-  const classNames = {
-    grid: "grid grid-cols-2 gap-8",
-    list: "flex flex-col gap-8",
-  };
 
   return (
     <div className={`rounded-lg ${bgColor} p-6 space-y-6 shadow-lg w-full`}>

@@ -6,38 +6,22 @@ import { CardGroup } from "@/components/card/card-group.tsx";
 import { useMemo } from "react";
 import { Items } from "@/data/data.ts";
 import EmptyState from "@/components/empty-state.tsx";
+import { classNames } from "@/constants/classes.ts";
+import {
+  getCardsSearchFilterData,
+  getCardsStatusFilterData,
+} from "@/lib/filters.ts";
 
 export default function Cards() {
   const { data, groupedData, groupBy, statuses } = useDataStore();
   const { view, status, search } = useFiltersStore();
 
-  // Todo: Extract to a separate file
-  const classNames = {
-    grid: "grid grid-cols-2 gap-6",
-    list: "flex flex-col gap-6",
-  };
-
-  // Todo: Extract this logic to a separate function
   const filteredData = useMemo(() => {
     if (!groupBy) {
       let newData: Items = [...data];
 
-      if (status) {
-        newData = newData.filter((item) => statuses[item.id] === status);
-      }
-
-      if (search) {
-        newData = newData.filter((item) => {
-          return (
-            item.title.toLowerCase().includes(search.toLowerCase()) ||
-            item?.author?.toLowerCase().includes(search.toLowerCase()) ||
-            item?.period?.toLowerCase().includes(search.toLowerCase()) ||
-            item?.questions?.some((question) =>
-              question.motive.toLowerCase().includes(search.toLowerCase()),
-            )
-          );
-        });
-      }
+      if (status) newData = getCardsStatusFilterData(newData, statuses, status);
+      if (search) newData = getCardsSearchFilterData(newData, search);
 
       return newData;
     } else {
@@ -46,7 +30,7 @@ export default function Cards() {
       if (status) {
         newData = Object.fromEntries(
           Object.entries(newData ?? {}).map(([key, value]) => {
-            return [key, value.filter((item) => statuses[item.id] === status)];
+            return [key, getCardsStatusFilterData(value, statuses, status)];
           }),
         );
       }
@@ -54,24 +38,13 @@ export default function Cards() {
       if (search) {
         newData = Object.fromEntries(
           Object.entries(newData ?? {}).map(([key, value]) => {
-            const valueFiltered = value.filter((item) => {
-              return (
-                item.title.toLowerCase().includes(search.toLowerCase()) ||
-                item?.author?.toLowerCase().includes(search.toLowerCase()) ||
-                item?.period?.toLowerCase().includes(search.toLowerCase()) ||
-                item?.questions?.some((question) =>
-                  question.motive.toLowerCase().includes(search.toLowerCase()),
-                )
-              );
-            });
+            const valueFiltered = getCardsSearchFilterData(value, search);
             return [key, valueFiltered];
           }),
         );
       }
 
-      if (!newData) {
-        return null;
-      }
+      if (!newData) return null;
 
       return Object.fromEntries(
         Object.entries(newData).filter(([, value]) => value.length > 0),
