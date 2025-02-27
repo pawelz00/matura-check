@@ -26,20 +26,28 @@ export default function QuestionCards() {
         .filter((i) => i.questions.length);
     }
     if (search.length > 0) {
-      newData = newData.map((i) => {
-        return {
-          ...i,
-          questions: i.questions.filter((q) => {
+      newData = newData
+        .map((i) => {
+          const matchesTitleOrAuthor =
+            i.title.toLowerCase().includes(search.toLowerCase()) ||
+            i?.author?.toLowerCase().includes(search.toLowerCase());
+
+          const filteredQuestions = i.questions.filter((q) => {
             return (
               q.question.toLowerCase().includes(search.toLowerCase()) ||
               q.motive.toLowerCase().includes(search.toLowerCase())
             );
-          }),
-        };
-      });
+          });
+
+          return {
+            ...i,
+            questions: matchesTitleOrAuthor ? i.questions : filteredQuestions,
+          };
+        })
+        .filter((i) => i.questions.length);
     }
-    return newData.filter((i) => i.questions.length);
-  }, [status, search]);
+    return newData;
+  }, [status, search, questionsStatuses]);
 
   const classNames = {
     grid: "grid grid-cols-2 gap-6",
@@ -57,7 +65,7 @@ export default function QuestionCards() {
   return (
     <main className={cn("w-full mt-6 items-center", classNames[view])}>
       {filteredQuestions.map((item) => (
-        <SingleCard key={item.id} item={item} />
+        <SingleCard key={JSON.stringify(item)} item={item} />
       ))}
     </main>
   );
