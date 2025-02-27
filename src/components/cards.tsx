@@ -23,11 +23,11 @@ export default function Cards() {
       let newData: Items = [...data];
 
       if (status) {
-        newData = data.filter((item) => statuses[item.id] === status);
+        newData = newData.filter((item) => statuses[item.id] === status);
       }
 
       if (search) {
-        newData = data.filter((item) => {
+        newData = newData.filter((item) => {
           return (
             item.title.toLowerCase().includes(search.toLowerCase()) ||
             item?.author?.toLowerCase().includes(search.toLowerCase()) ||
@@ -41,11 +41,11 @@ export default function Cards() {
 
       return newData;
     } else {
-      let newData = groupedData;
+      let newData = { ...groupedData };
 
       if (status) {
         newData = Object.fromEntries(
-          Object.entries(groupedData ?? {}).map(([key, value]) => {
+          Object.entries(newData ?? {}).map(([key, value]) => {
             return [key, value.filter((item) => statuses[item.id] === status)];
           }),
         );
@@ -53,11 +53,15 @@ export default function Cards() {
 
       if (search) {
         newData = Object.fromEntries(
-          Object.entries(groupedData ?? {}).map(([key, value]) => {
+          Object.entries(newData ?? {}).map(([key, value]) => {
             const valueFiltered = value.filter((item) => {
               return (
                 item.title.toLowerCase().includes(search.toLowerCase()) ||
-                item?.author?.toLowerCase().includes(search.toLowerCase())
+                item?.author?.toLowerCase().includes(search.toLowerCase()) ||
+                item?.period?.toLowerCase().includes(search.toLowerCase()) ||
+                item?.questions?.some((question) =>
+                  question.motive.toLowerCase().includes(search.toLowerCase()),
+                )
               );
             });
             return [key, valueFiltered];
@@ -75,7 +79,12 @@ export default function Cards() {
     }
   }, [status, search, statuses, groupBy]);
 
-  if (filteredData?.length === 0 || filteredData === null) {
+  // If there are no items to display, show an empty state
+  if (
+    filteredData?.length === 0 ||
+    filteredData === null ||
+    Object.keys(filteredData).length === 0
+  ) {
     return (
       <main className="w-full mt-6 items-center">
         <EmptyState />

@@ -27,7 +27,7 @@ export default function Filters({ showButtonFilters = true }: FiltersProps) {
     >
       <SearchInputWithTooltip />
       {showButtonFilters && (
-        <div className={"flex gap-x-1 items-center"}>
+        <div className={"flex gap-x-1 items-center ml-2"}>
           <ButtonFilter filter={"period"}>Epoka</ButtonFilter>
           <ButtonFilter filter={"author"}>Autor</ButtonFilter>
           <ButtonFilter filter={"motive"}>Motyw</ButtonFilter>
