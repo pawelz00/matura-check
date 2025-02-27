@@ -10,15 +10,14 @@ import { cn } from "@/lib/utils.ts";
 import { GridIcon, ListIcon } from "lucide-react";
 import { useFiltersStore } from "@/store/useFiltersStore.ts";
 import { DataStore, useDataStore } from "@/store/useDataStore.ts";
-import { Input } from "@/components/ui/input.tsx";
+import SearchInputWithTooltip from "@/components/functional/search-input.tsx";
 
 export type FiltersProps = {
   showButtonFilters?: boolean;
 };
 
 export default function Filters({ showButtonFilters = true }: FiltersProps) {
-  const { view, setView, status, setStatus, search, setSearch } =
-    useFiltersStore();
+  const { view, setView, status, setStatus } = useFiltersStore();
 
   return (
     <section
@@ -26,12 +25,7 @@ export default function Filters({ showButtonFilters = true }: FiltersProps) {
         "flex justify-between items-center gap-x-1 min-w-full px-3 pt-3 min-h-11"
       }
     >
-      <Input
-        className={"w-40 h-8 mr-2"}
-        placeholder={"Szukaj..."}
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
+      <SearchInputWithTooltip />
       {showButtonFilters && (
         <div className={"flex gap-x-1 items-center"}>
           <ButtonFilter filter={"period"}>Epoka</ButtonFilter>

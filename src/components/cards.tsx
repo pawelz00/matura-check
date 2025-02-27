@@ -11,11 +11,13 @@ export default function Cards() {
   const { data, groupedData, groupBy, statuses } = useDataStore();
   const { view, status, search } = useFiltersStore();
 
+  // Todo: Extract to a separate file
   const classNames = {
     grid: "grid grid-cols-2 gap-6",
     list: "flex flex-col gap-6",
   };
 
+  // Todo: Extract this logic to a separate function
   const filteredData = useMemo(() => {
     if (!groupBy) {
       let newData: Items = [...data];
@@ -28,7 +30,11 @@ export default function Cards() {
         newData = data.filter((item) => {
           return (
             item.title.toLowerCase().includes(search.toLowerCase()) ||
-            item?.author?.toLowerCase().includes(search.toLowerCase())
+            item?.author?.toLowerCase().includes(search.toLowerCase()) ||
+            item?.period?.toLowerCase().includes(search.toLowerCase()) ||
+            item?.questions?.some((question) =>
+              question.motive.toLowerCase().includes(search.toLowerCase()),
+            )
           );
         });
       }
