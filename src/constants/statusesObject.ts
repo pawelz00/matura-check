@@ -6,7 +6,8 @@ type Statuses = {
     status: Status;
     text: string;
     icon: LucideIcon;
-    color: string;
+    bgColor: string;
+    textColor: string;
     hoverColor: string;
   };
 };
@@ -16,28 +17,32 @@ export const statusesObj: Statuses = {
     status: "notStarted",
     text: "Nie rozpoczęte",
     icon: CircleX,
-    color: "bg-red-100",
+    bgColor: "bg-red-100",
+    textColor: "text-red-500",
     hoverColor: "hover:bg-red-500",
   },
   inProgress: {
     status: "inProgress",
     text: "W trakcie",
     icon: Pickaxe,
-    color: "bg-yellow-100",
+    bgColor: "bg-yellow-100",
+    textColor: "text-yellow-500",
     hoverColor: "hover:bg-yellow-500",
   },
   review: {
     status: "review",
     text: "Do powtórzenia",
     icon: Eye,
-    color: "bg-blue-100",
+    bgColor: "bg-blue-100",
+    textColor: "text-blue-500",
     hoverColor: "hover:bg-blue-500",
   },
   learned: {
     status: "learned",
     text: "Nauczone",
     icon: Check,
-    color: "bg-green-100",
+    bgColor: "bg-green-100",
+    textColor: "text-green-500",
     hoverColor: "hover:bg-green-500",
   },
 } as const;

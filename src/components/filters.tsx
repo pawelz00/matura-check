@@ -27,7 +27,7 @@ export default function Filters({ showButtonFilters = true }: FiltersProps) {
       }
     >
       <Input
-        className={"w-40 h-8"}
+        className={"w-40 h-8 mr-2"}
         placeholder={"Szukaj..."}
         value={search}
         onChange={(e) => setSearch(e.target.value)}
