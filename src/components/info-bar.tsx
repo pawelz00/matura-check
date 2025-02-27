@@ -1,15 +1,16 @@
-import Filters from "@/components/filters.tsx";
+import Filters, { FiltersProps } from "@/components/filters.tsx";
 import Stats, { StatsProps } from "@/components/stats.tsx";
 
 type InfoBarProps = {
-  statsMode?: StatsProps["mode"];
+  mode?: StatsProps["mode"];
+  showButtonFilters?: FiltersProps["showButtonFilters"];
 };
 
-export default function InfoBar({ statsMode = "default" }: InfoBarProps) {
+export default function InfoBar({ mode, showButtonFilters }: InfoBarProps) {
   return (
     <div className={"border rounded-lg w-full flex flex-col bg-white"}>
-      <Filters />
-      <Stats mode={statsMode} />
+      <Filters showButtonFilters={showButtonFilters} />
+      <Stats mode={mode} />
     </div>
   );
 }

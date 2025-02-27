@@ -13,7 +13,7 @@ function Questions() {
         "flex flex-col flex-1 bg-background items-center max-w-full md:max-w-3/4 xl:max-w-1/2 mx-auto mb-12"
       }
     >
-      <InfoBar statsMode={"questions"} />
+      <InfoBar mode={"questions"} showButtonFilters={false} />
       <QuestionCards />
     </div>
   );

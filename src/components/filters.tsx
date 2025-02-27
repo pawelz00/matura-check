@@ -11,21 +11,27 @@ import { GridIcon, ListIcon } from "lucide-react";
 import { useFiltersStore } from "@/store/useFiltersStore.ts";
 import { DataStore, useDataStore } from "@/store/useDataStore.ts";
 
-export default function Filters() {
+export type FiltersProps = {
+  showButtonFilters?: boolean;
+};
+
+export default function Filters({ showButtonFilters = true }: FiltersProps) {
   const { view, setView, status, setStatus } = useFiltersStore();
 
   return (
     <section
       className={
-        "flex justify-between items-center gap-x-1 min-w-full px-3 pt-3"
+        "flex justify-between items-center gap-x-1 min-w-full px-3 pt-3 min-h-11"
       }
     >
-      <div className={"flex gap-x-1 items-center"}>
-        <ButtonFilter filter={"period"}>Epoka</ButtonFilter>
-        <ButtonFilter filter={"author"}>Autor</ButtonFilter>
-        <ButtonFilter filter={"motive"}>Motyw</ButtonFilter>
-      </div>
-      <div className={"flex gap-x-3 items-center"}>
+      {showButtonFilters && (
+        <div className={"flex gap-x-1 items-center"}>
+          <ButtonFilter filter={"period"}>Epoka</ButtonFilter>
+          <ButtonFilter filter={"author"}>Autor</ButtonFilter>
+          <ButtonFilter filter={"motive"}>Motyw</ButtonFilter>
+        </div>
+      )}
+      <div className={"flex gap-x-3 items-center ml-auto"}>
         {Object.entries(statusesObj).map(([key, value]) => {
           return (
             <TooltipProvider key={key}>
