@@ -49,7 +49,7 @@ export default function Filters({ showButtonFilters = true }: FiltersProps) {
                     className={cn(
                       "cursor-pointer size-6",
                       status === value.status &&
-                        "bg-accent text-accent-foreground",
+                        "bg-primary text-primary-foreground",
                     )}
                   >
                     <value.icon className={"size-4"} />

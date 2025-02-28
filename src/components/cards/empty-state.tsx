@@ -17,7 +17,7 @@ export default function EmptyState({
   const { setSearch, setStatus } = useFiltersStore();
 
   return (
-    <Card className="w-full  mx-auto border-dashed bg-background/50">
+    <Card className="w-full mx-auto border-dashed bg-card/50">
       <CardContent className="flex flex-col items-center justify-center py-12 text-center space-y-5">
         <div className="rounded-full bg-muted p-4 w-16 h-16 flex items-center justify-center">
           <FileQuestion className="h-8 w-8 text-muted-foreground" />
@@ -31,7 +31,7 @@ export default function EmptyState({
         {showResetButton && (
           <Button
             variant="outline"
-            className="mt-4 flex items-center gap-2"
+            className="mt-4 flex items-center gap-2 hover:cursor-pointer"
             onClick={() => {
               setSearch("");
               setStatus(null);
