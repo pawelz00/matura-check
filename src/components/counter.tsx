@@ -25,7 +25,7 @@ export default function Counter() {
 
   return (
     <Badge
-      variant={"default"}
+      variant={"secondary"}
       className={"font-medium flex items-center gap-x-1.5"}
     >
       <Clock2Icon />

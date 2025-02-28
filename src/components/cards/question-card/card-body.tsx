@@ -4,7 +4,6 @@ import { statusesObj } from "@/constants/statusesObject.ts";
 import {
   Tooltip,
   TooltipContent,
-  TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip.tsx";
 import { Button } from "@/components/ui/button.tsx";
@@ -29,29 +28,30 @@ export default function CardBody({ item }: { item: QuestionsData }) {
       <div className="flex gap-3">
         {Object.entries(statusesObj).map(([key, value]) => {
           return (
-            <TooltipProvider key={key}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Button
-                    variant={"ghost"}
-                    size={"icon"}
-                    className={cn(
-                      questionStatus(q.id) === value.status &&
-                        "bg-primary text-primary-foreground",
-                      "hover:bg-primary hover:text-primary-foreground hover:cursor-pointer",
-                    )}
-                    onClick={() => {
-                      setQuestionsStatus(item.id, q.id, value.status);
-                    }}
-                  >
-                    <value.icon className={"size-4"} />
-                  </Button>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{value.text}</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
+            <Tooltip key={key}>
+              <TooltipTrigger asChild>
+                <Button
+                  variant={"ghost"}
+                  size={"icon"}
+                  className={cn(
+                    questionStatus(q.id) === value.status && "bg-card-header",
+                    "hover:cursor-pointer hover:bg-card-header hover:text-card-foreground",
+                  )}
+                  onClick={() => {
+                    setQuestionsStatus(item.id, q.id, value.status);
+                  }}
+                >
+                  <value.icon className={"size-4"} />
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent
+                className={
+                  "bg-card-header text-card-foreground fill-card-header"
+                }
+              >
+                <p>{value.text}</p>
+              </TooltipContent>
+            </Tooltip>
           );
         })}
       </div>

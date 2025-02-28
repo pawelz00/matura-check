@@ -14,7 +14,7 @@ export default function Navbar() {
       <nav>
         <ul
           className={
-            "flex justify-between items-center bg-white px-2 h-12 rounded-2xl gap-x-1 border border-muted"
+            "flex justify-between items-center bg-card px-2 h-12 rounded-2xl gap-x-1 border"
           }
         >
           <ButtonNav href={"/"} active={location.pathname === "/"}>
@@ -52,7 +52,7 @@ function ButtonNav({
         disabled={disabled}
         className={cn(
           "hover:cursor-pointer rounded-xl",
-          active && "bg-accent text-accent-foreground",
+          active && "bg-primary text-primary-foreground",
         )}
         variant={"ghost"}
       >
