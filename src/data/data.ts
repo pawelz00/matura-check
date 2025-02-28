@@ -351,22 +351,22 @@ export const appData: Items = [
     ],
     externalResources: [
       {
-        title: "Makbet - Streszczenie szczegółowe na Bryk.pl",
+        title: "Streszczenie szczegółowe na Bryk.pl",
         url: "https://www.bryk.pl/lektury/william-szekspir/makbet.streszczenie-szczegolowe",
         type: "article",
       },
       {
-        title: "Makbet - Streszczenie krótkie na KLP.pl",
+        title: "Streszczenie krótkie na KLP.pl",
         url: "https://klp.pl/makbet/a-5944.html",
         type: "article",
       },
       {
-        title: "Makbet - Streszczenie na Poezja.org",
+        title: "Streszczenie na Poezja.org",
         url: "https://poezja.org/wz/interpretacja/3655/Makbet_streszczenie",
         type: "article",
       },
       {
-        title: "Makbet - Streszczenie i opracowanie w 5 minut na YouTube",
+        title: "Streszczenie i opracowanie w 5 minut na YouTube",
         url: "https://www.youtube.com/watch?v=IiUcjRBh4dg",
         type: "video",
       },
@@ -382,77 +382,429 @@ export const appData: Items = [
     title: "Skąpiec",
     author: "Molier",
     period: "Barok",
+    externalResources: [
+      {
+        title: "Streszczenie szczegółowe na Bryk.pl",
+        url: "https://www.bryk.pl/lektury/molier/skapiec.streszczenie-szczegolowe",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na SetkaZPolaka.pl",
+        url: "https://setkazpolaka.pl/molier-skapiec-streszczenie/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na Poezja.org",
+        url: "https://poezja.org/wz/interpretacja/3905/Skapiec_streszczenie",
+        type: "article",
+      },
+      {
+        title: "Streszczenie obrazkowe na YouTube",
+        url: "https://www.youtube.com/watch?v=tNEUEhcksp0",
+        type: "video",
+      },
+      {
+        title: "Opracowanie i streszczenie na Baba od polskiego",
+        url: "https://babaodpolskiego.pl/molier-skapiec-opracowanie-i-streszczenie/",
+        type: "article",
+      },
+    ],
   },
   {
     id: 10,
     title: "Satyra (wybrana)",
     author: "Ignacy Krasicki",
     period: "Oświecenie",
+    externalResources: [
+      {
+        title: "Streszczenie i analiza na Bryk.pl",
+        url: "https://www.bryk.pl/wypracowania/jezyk-polski/wiersze/1010736-satyry-ignacego-krasickiego-analiza-i-interpretacja.html",
+        type: "article",
+      },
+      {
+        title: "Omówienie na DlaUcznia.pl",
+        url: "https://www.dlaucznia.pl/lekcja/jezyk-polski,nauka-o-literaturze,oswiecenie,oswiecenie-lektury,ignacy-krasicki-satyry",
+        type: "article",
+      },
+      {
+        title: "Teksty na WolneLektury.pl",
+        url: "https://wolnelektury.pl/katalog/lektura/satyry/",
+        type: "article",
+      },
+      {
+        title: "Wybrane utwory na YouTube",
+        url: "https://www.youtube.com/watch?v=0zQz8Z8zZqg",
+        type: "video",
+      },
+      {
+        title: "Knowunity",
+        url: "https://knowunity.pl/knows/jzyk-polski-satyry-ignacego-krasickiego-dd24cf6f-f017-4ad1-ac9c-f0c18b056dfd",
+        type: "article",
+      },
+    ],
   },
   {
     id: 11,
     title: "Romantyczność",
     author: "Adam Mickiewicz",
     period: "Romantyzm",
+    externalResources: [
+      {
+        title: "Streszczenie i interpretacja na Poezja.org",
+        url: "https://poezja.org/wz/interpretacja/3341/Romantycznosc",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na Zasob.pl",
+        url: "https://zasob.pl/jezyk-polski/romantycznosc-adama-mickiewicza-streszczenie/",
+        type: "article",
+      },
+      {
+        title: "Analiza i interpretacja na Baba od polskiego",
+        url: "https://babaodpolskiego.pl/romantycznosc-analiza-i-interpretacja/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na Bryk.pl",
+        url: "https://www.bryk.pl/wypracowania/jezyk-polski/streszczenia-i-plany-wydarzen/1001862-streszczenie-utworu-adama-mickiewicza-romantycznosc.html",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na YouTube",
+        url: "https://www.youtube.com/watch?v=Ula0WaOrSh0",
+        type: "video",
+      },
+    ],
   },
   {
     id: 12,
     title: "Dziady cz. III",
     author: "Adam Mickiewicz",
     period: "Romantyzm",
+    externalResources: [
+      {
+        title: "Streszczenie szczegółowe na SetkaZPolaka.pl",
+        url: "https://setkazpolaka.pl/dziady-cz-iii-streszczenie/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie krótkie na Bryk.pl",
+        url: "https://www.bryk.pl/lektury/adam-mickiewicz/dziady-cz-iii.streszczenie-krotkie",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na Poezja.org",
+        url: "https://poezja.org/wz/interpretacja/3706/Dziady_cz_III_streszczenie",
+        type: "article",
+      },
+      {
+        title: "Streszczenie szczegółowe na YouTube",
+        url: "https://www.youtube.com/watch?v=vsLbg8RkDu0",
+        type: "video",
+      },
+      {
+        title: "Notatki i streszczenie na YouTube",
+        url: "https://www.youtube.com/watch?v=dtZxwQ2JNXY",
+        type: "video",
+      },
+    ],
   },
   {
     id: 13,
     title: "Lalka",
     author: "Bolesław Prus",
     period: "Pozytywizm",
+    externalResources: [
+      {
+        title: "Streszczenie szczegółowe na Bryk.pl",
+        url: "https://www.bryk.pl/lektury/boleslaw-prus/lalka.streszczenie-szczegolowe",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na SetkaZPolaka.pl",
+        url: "https://setkazpolaka.pl/lalka-streszczenie-powiesc-boleslaw-prus/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na Poezja.org",
+        url: "https://poezja.org/wz/interpretacja/3668/Lalka_streszczenie",
+        type: "article",
+      },
+      {
+        title: "Streszczenie i opracowanie w 5 minut na YouTube",
+        url: "https://www.youtube.com/watch?v=ovk96DcnnWw",
+        type: "video",
+      },
+      {
+        title: "Opracowanie do matury na StudniówkaMaturalna.pl",
+        url: "https://studniowkamaturalna.pl/lalka-streszczenie-opracowanie-do-matury/",
+        type: "article",
+      },
+    ],
   },
   {
     id: 14,
     title: "Zbrodnia i kara",
     author: "Fiodor Dostojewski",
     period: "Realizm",
+    externalResources: [
+      {
+        title: "Streszczenie szczegółowe na SetkaZPolaka.pl",
+        url: "https://setkazpolaka.pl/zbrodnia-i-kara-streszczenie/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na Bryk.pl",
+        url: "https://www.bryk.pl/wypracowania/jezyk-polski/lektury/1011105-zbrodnia-i-kara-fiodor-dostojewski-streszczenie.html",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na Poezja.org",
+        url: "https://poezja.org/wz/interpretacja/4086/Zbrodnia_i_kara_streszczenie",
+        type: "article",
+      },
+      {
+        title: "Streszczenie rozszerzone na YouTube",
+        url: "https://www.youtube.com/watch?v=0DlOMt8-GS8",
+        type: "video",
+      },
+      {
+        title: "Opracowanie do matury na Opracowania.pl",
+        url: "https://opracowania.pl/opracowania/jezyk-polski/zbrodnia-i-kara-f-dostojewski,oid,428,streszczenie",
+        type: "article",
+      },
+    ],
   },
   {
     id: 15,
     title: "Wesele",
     author: "Stanisław Wyspiański",
     period: "Młoda Polska",
+    externalResources: [
+      {
+        title: "Streszczenie i opracowanie na YouTube",
+        url: "https://www.youtube.com/watch?v=H2etKrzBMKQ",
+        type: "video",
+      },
+      {
+        title: "Streszczenie na SetkaZPolaka.pl",
+        url: "https://setkazpolaka.pl/wesele-streszczenie-stanislaw-wyspianski/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie i opracowanie na Baba od polskiego",
+        url: "https://babaodpolskiego.pl/wesele-stanislaw-wyspianski/",
+        type: "article",
+      },
+      {
+        title:
+          "Najważniejsze informacje do matury na WielkaPowtorkaMaturalna.pl",
+        url: "https://wielkapowtorkamaturalna.pl/wesele-stanislaw-wyspianski/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na Poezja.org",
+        url: "https://poezja.org/wz/interpretacja/4597/Wesele_streszczenie",
+        type: "article",
+      },
+    ],
   },
   {
     id: 16,
     title: "Przedwiośnie",
     author: "Stefan Żeromski",
     period: "Dwudziestolecie międzywojenne",
+    externalResources: [
+      {
+        title: "Streszczenie i opracowanie na SetkaZPolaka.pl",
+        url: "https://setkazpolaka.pl/przedwiosnie-streszczenie/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie i opracowanie do matury na StudniówkaMaturalna.pl",
+        url: "https://studniowkamaturalna.pl/przedwiosnie-streszczenie-opracowanie/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na Baba od polskiego",
+        url: "https://babaodpolskiego.pl/stefan-zeromski-przedwiosnie-streszczenie-i-opracowanie/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie i opracowanie w 5 minut na YouTube",
+        url: "https://www.youtube.com/watch?v=xvwmIM-ypUY",
+        type: "video",
+      },
+      {
+        title: "Streszczenie na Poezja.org",
+        url: "https://poezja.org/wz/interpretacja/4027/Przedwiosnie_streszczenie",
+        type: "article",
+      },
+    ],
   },
   {
     id: 17,
     title: "Sklepy cynamonowe (opowiadanie)",
     author: "Bruno Schulz",
     period: "Dwudziestolecie międzywojenne",
+    externalResources: [
+      {
+        title: "Streszczenie na Ostatni Dzwonek",
+        url: "https://ostatnidzwonek.pl/sklepy-cynamonowe/a-11423.html",
+        type: "article",
+      },
+      {
+        title: "Streszczenie i bohaterowie na Knowunity",
+        url: "https://knowunity.pl/knows/jzyk-polski-sklepy-cynamonowe-74452cd3-46b2-4a33-9b52-6d36f25fba2c",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na KLP.pl",
+        url: "https://klp.pl/sklepy-cynamonowe/a-5892.html",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na Poezja.org",
+        url: "https://poezja.org/wz/interpretacja/5352/Sklepy_cynamonowe_streszczenie",
+        type: "article",
+      },
+      {
+        title: "Streszczenie i opracowanie na YouTube",
+        url: "https://www.youtube.com/watch?v=F866SUmiaXs",
+        type: "video",
+      },
+    ],
   },
   {
     id: 18,
     title: "Dżuma",
     author: "Albert Camus",
     period: "Literatura współczesna",
+    externalResources: [
+      {
+        title: "Streszczenie szczegółowe na Bryk.pl",
+        url: "https://www.bryk.pl/lektury/albert-camus/dzuma.streszczenie-szczegolowe",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na SetkaZPolaka.pl",
+        url: "https://setkazpolaka.pl/dzuma-bohaterowie-streszczenie-opracowanie/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na Poezja.org",
+        url: "https://poezja.org/wz/interpretacja/4311/Dzuma_streszczenie",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na YouTube",
+        url: "https://www.youtube.com/watch?v=q2pRKP2rp2w",
+        type: "video",
+      },
+      {
+        title: "Streszczenie na Ortograf.pl",
+        url: "https://www.ortograf.pl/lektury/dzuma-streszczenie",
+        type: "article",
+      },
+    ],
   },
   {
     id: 19,
     title: "Rok 1984",
     author: "George Orwell",
     period: "Literatura współczesna",
+    externalResources: [
+      {
+        title: "Streszczenie na Poezja.org",
+        url: "https://poezja.org/wz/interpretacja/4930/Rok_1984_streszczenie",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na maturę na WielkaPowtorkaMaturalna.pl",
+        url: "https://wielkapowtorkamaturalna.pl/rok-1984-streszczenie-na-mature/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na Knowunity",
+        url: "https://knowunity.pl/knows/jzyk-polski-rok-1984-8047b725-df56-4e56-a052-b580eb780189",
+        type: "article",
+      },
+      {
+        title: "Streszczenie i opracowanie na YouTube",
+        url: "https://www.youtube.com/watch?v=4MyFBy4qZ78",
+        type: "video",
+      },
+      {
+        title: "Streszczenie na SetkaZPolaka.pl",
+        url: "https://setkazpolaka.pl/rok-1984-streszczenie/",
+        type: "article",
+      },
+    ],
   },
   {
     id: 20,
     title: "Tango",
     author: "Sławomir Mrożek",
     period: "Literatura współczesna",
+    externalResources: [
+      {
+        title: "Streszczenie i opracowanie na SetkaZPolaka.pl",
+        url: "https://setkazpolaka.pl/tango-streszczenie-slawomir-mrozek/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie, bohaterowie i problematyka na StrefaEdukacji.pl",
+        url: "https://strefaedukacji.pl/tango-slawomira-mrozka-streszczenie-bohaterowie-problematyka-lektura-obowiazkowa-na-mature-2024/ar/c5-17103065",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na Poezja.org",
+        url: "https://poezja.org/wz/interpretacja/3708/Tango_streszczenie",
+        type: "article",
+      },
+      {
+        title: "Streszczenie i opracowanie na YouTube",
+        url: "https://www.youtube.com/watch?v=LnVJipaq_Uo",
+        type: "video",
+      },
+      {
+        title: "Streszczenie szczegółowe na KLP.pl",
+        url: "https://klp.pl/tango/a-5658.html",
+        type: "article",
+      },
+    ],
   },
   {
     id: 21,
     title: "Zdążyć przed Panem Bogiem",
     author: "Hanna Krall",
     period: "Literatura współczesna",
+    externalResources: [
+      {
+        title: "Streszczenie i opracowanie",
+        url: "https://setkazpolaka.pl/zdazyc-przed-panem-bogiem/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie i opracowanie",
+        url: "https://babaodpolskiego.pl/hanna-krall-zdazyc-przed-panem-bogiem/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie, bohaterowie",
+        url: "https://knowunity.pl/knows/jzyk-polski-zdy-przed-panem-bogiem-58ba2988-fe8d-48af-8126-e2a3614d3853",
+        type: "article",
+      },
+      {
+        title: "Streszczenie szczegółowe",
+        url: "https://www.bryk.pl/lektury/hanna-krall/zdazyc-przed-panem-bogiem.streszczenie-szczegolowe",
+        type: "article",
+      },
+      {
+        title: "Streszczenie",
+        url: "https://poezja.org/wz/interpretacja/4987/Zdazyc_przed_Panem_Bogiem_streszczenie",
+        type: "article",
+      },
+    ],
   },
 ];

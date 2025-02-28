@@ -8,7 +8,11 @@ type InfoBarProps = {
 
 export default function InfoBar({ mode, showButtonFilters }: InfoBarProps) {
   return (
-    <div className={"border rounded-lg w-full flex flex-col bg-white"}>
+    <div
+      className={
+        "border rounded-lg w-full flex flex-col bg-white sticky top-20"
+      }
+    >
       <Filters showButtonFilters={showButtonFilters} />
       <Stats mode={mode} />
     </div>
