@@ -33,7 +33,11 @@ export default function Filters({ showButtonFilters = true }: FiltersProps) {
           <ButtonFilter filter={"motive"}>Motyw</ButtonFilter>
         </div>
       )}
-      <div className={"flex gap-x-3 items-center ml-auto"}>
+      <div
+        className={
+          "flex gap-x-3 items-center ml-auto border border-dotted p-1 rounded-full px-2"
+        }
+      >
         {Object.entries(statusesObj).map(([key, value]) => {
           return (
             <TooltipProvider key={key}>
@@ -44,10 +48,10 @@ export default function Filters({ showButtonFilters = true }: FiltersProps) {
                       setStatus(status === value.status ? null : value.status);
                     }}
                     key={key}
-                    variant={"ghost"}
+                    variant={"outline"}
                     size={"icon"}
                     className={cn(
-                      "cursor-pointer size-6",
+                      "cursor-pointer size-6 rounded-full hover:bg-primary hover:text-primary-foreground",
                       status === value.status &&
                         "bg-primary text-primary-foreground",
                     )}
@@ -67,7 +71,7 @@ export default function Filters({ showButtonFilters = true }: FiltersProps) {
             setView(view === "list" ? "grid" : "list");
           }}
           className={"cursor-pointer size-6"}
-          variant={"ghost"}
+          variant={"outline"}
           size={"icon"}
         >
           {view === "list" ? (
@@ -99,8 +103,8 @@ function ButtonFilter({
         }
       }}
       className={cn(
-        "hover:cursor-pointer ",
-        groupBy === filter && "bg-accent text-accent-foreground",
+        "hover:cursor-pointer",
+        groupBy === filter && "bg-primary text-primary-foreground",
       )}
       variant={"ghost"}
       size={"sm"}

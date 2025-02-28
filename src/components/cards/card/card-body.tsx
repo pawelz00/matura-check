@@ -20,11 +20,7 @@ export default function CardBody({ item }: { item: Item }) {
         <div className="flex flex-wrap gap-2">
           {item?.questions?.map((item) => {
             return (
-              <Badge
-                variant={"default"}
-                className={"transition-colors hover:bg-secondary"}
-                key={item.question}
-              >
+              <Badge variant={"accent"} key={item.question}>
                 {item.motive}
               </Badge>
             );
@@ -38,32 +34,36 @@ export default function CardBody({ item }: { item: Item }) {
         <h3 className="text-md font-medium text-card-foreground">Źródła</h3>
         <div className="text-sm ">
           <div className={"flex flex-col gap-1 w-fit"}>
-            {item?.externalResources?.map((item) => {
-              return (
-                <a
-                  href={item.url}
-                  target={"_blank"}
-                  rel={"noreferrer"}
-                  key={item.url}
-                  className={
-                    "flex gap-x-2 items-center text-md hover:underline"
-                  }
-                >
-                  <Button
-                    size={"icon"}
-                    variant={"outline"}
-                    className={"rounded-full border size-7"}
+            {item?.externalResources
+              ?.sort((a) => {
+                return a.type === "video" ? -1 : 1;
+              })
+              .map((item) => {
+                return (
+                  <a
+                    href={item.url}
+                    target={"_blank"}
+                    rel={"noreferrer"}
+                    key={item.url}
+                    className={
+                      "flex gap-x-2 items-center text-md hover:underline"
+                    }
                   >
-                    {item.type === "video" ? (
-                      <VideoIcon />
-                    ) : (
-                      <ListIcon className={"size-4"} />
-                    )}
-                  </Button>
-                  <span className={"text-sm"}>{item.title}</span>
-                </a>
-              );
-            })}
+                    <Button
+                      size={"icon"}
+                      variant={"outline"}
+                      className={"rounded-full border size-7"}
+                    >
+                      {item.type === "video" ? (
+                        <VideoIcon />
+                      ) : (
+                        <ListIcon className={"size-4"} />
+                      )}
+                    </Button>
+                    <span className={"text-sm"}>{item.title}</span>
+                  </a>
+                );
+              })}
           </div>
         </div>
       </div>

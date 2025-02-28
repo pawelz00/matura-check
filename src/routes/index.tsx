@@ -1,12 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
 import InfoBar from "@/components/info-bar.tsx";
 import Cards from "@/components/cards/cards.tsx";
+import { useEffect } from "react";
+import { useDataStore } from "@/store/useDataStore.ts";
 
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
 function Index() {
+  const { loadStatuses } = useDataStore();
+
+  useEffect(() => {
+    loadStatuses();
+  }, [loadStatuses]);
+
   return (
     <div
       className={

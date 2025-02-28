@@ -6,29 +6,24 @@ export default function Navbar() {
   const location = useLocation();
 
   return (
-    <div
-      className={
-        "flex flex-col gap-y-6 w-fit items-center mx-auto rounded-xl py-6 sticky top-0"
-      }
-    >
+    <div className={"w-fit mx-auto py-6 sticky top-0 z-[99999]"}>
       <nav>
         <ul
           className={
-            "flex justify-between items-center bg-card px-2 h-12 rounded-2xl gap-x-1 border"
+            "flex justify-between items-center bg-card px-1.5 h-12 rounded-full gap-x-1.5 border border-dotted"
           }
         >
-          <ButtonNav href={"/"} active={location.pathname === "/"}>
-            Podstawa
-          </ButtonNav>
           <ButtonNav
+            title={"Podstawa"}
+            href={"/"}
+            active={location.pathname === "/"}
+          />
+          <ButtonNav
+            title={"Ustna"}
             href={"/questions"}
             active={location.pathname === "/questions"}
-          >
-            Ustna
-          </ButtonNav>
-          <ButtonNav href={"/"} disabled>
-            Rozszerzenie
-          </ButtonNav>
+          />
+          <ButtonNav title={"Rozszerzenie"} href={"/"} disabled />
         </ul>
       </nav>
     </div>
@@ -36,12 +31,12 @@ export default function Navbar() {
 }
 
 function ButtonNav({
-  children,
+  title,
   href,
   disabled = false,
   active = false,
 }: {
-  children: string;
+  title: string;
   href: string;
   disabled?: boolean;
   active?: boolean;
@@ -51,12 +46,12 @@ function ButtonNav({
       <Button
         disabled={disabled}
         className={cn(
-          "hover:cursor-pointer rounded-xl",
+          "hover:cursor-pointer rounded-full",
           active && "bg-primary text-primary-foreground",
         )}
         variant={"ghost"}
       >
-        {children}
+        {title}
       </Button>
     </Link>
   );
