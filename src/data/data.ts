@@ -187,7 +187,7 @@ export const appData: Items = [
     title: "Antygona",
     author: "Sofokles",
     description:
-      "Tragedia grecka przedstawiająca konflikt między prawem boskim a ludzkim. Antygona buntuje się przeciwko władzy, kierując się poczuciem obowiązku wobec rodziny.",
+      "Tragedia grecka ukazująca konflikt między prawem boskim a ludzkim. Tytułowa bohaterka sprzeciwia się władcy Teb, Kreonowi, chcąc pochować swojego brata zgodnie z nakazami religijnymi. Jej bunt prowadzi do tragicznych konsekwencji, ukazując cenę wierności własnym przekonaniom. Dramat porusza tematy władzy, moralności i lojalności, stawiając pytania o granice posłuszeństwa wobec prawa.",
     period: "Starożytność",
     questions: [
       {
@@ -380,8 +380,24 @@ export const appData: Items = [
   {
     id: 9,
     title: "Skąpiec",
+    description:
+      "Komedia o chciwości i obsesyjnym gromadzeniu bogactwa. Ukazuje konsekwencje skrajnego materializmu i braku wartości duchowych.",
     author: "Molier",
     period: "Barok",
+    questions: [
+      {
+        id: 1,
+        motive: "Czy dobra materialne czynią człowieka szczęśliwym?",
+        question:
+          "Omów zagadnienie na podstawie Skąpca Moliera. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 2,
+        motive: "Przyczyny nieporozumień między rodzicami a dziećmi.",
+        question:
+          "Omów zagadnienie na podstawie Skąpca Moliera. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+    ],
     externalResources: [
       {
         title: "Streszczenie szczegółowe na Bryk.pl",
@@ -415,6 +431,14 @@ export const appData: Items = [
     title: "Satyra (wybrana)",
     author: "Ignacy Krasicki",
     period: "Oświecenie",
+    questions: [
+      {
+        id: 1,
+        motive: "Wady ludzkie w krzywym zwierciadle satyry.",
+        question:
+          "Omów zagadnienie na podstawie wybranej satyry Ignacego Krasickiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+    ],
     externalResources: [
       {
         title: "Streszczenie i analiza na Bryk.pl",
@@ -448,6 +472,20 @@ export const appData: Items = [
     title: "Romantyczność",
     author: "Adam Mickiewicz",
     period: "Romantyzm",
+    questions: [
+      {
+        id: 1,
+        motive: "Świat ducha a świat rozumu.",
+        question:
+          "Omów zagadnienie na podstawie Romantyczności Adama Mickiewicza. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 2,
+        motive: "Jakie znaczenie dla człowieka ma przyroda?",
+        question:
+          "Omów zagadnienie na podstawie znanych Ci ballad Adama Mickiewicza. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+    ],
     externalResources: [
       {
         title: "Streszczenie i interpretacja na Poezja.org",
@@ -679,6 +717,8 @@ export const appData: Items = [
     id: 18,
     title: "Dżuma",
     author: "Albert Camus",
+    description:
+      "Powieść egzystencjalna, która opisuje epidemię dżumy w Oranie jako metaforę ludzkiego cierpienia i walki z absurdem życia. Główny bohater, doktor Rieux, z poświęceniem walczy z chorobą, mimo świadomości, że jego działania mogą być daremne. Dzieło ukazuje solidarność, heroizm i ludzką godność w obliczu nieuchronnej śmierci. Camus podkreśla, że jedyną odpowiedzią na absurd istnienia jest bunt i bezinteresowna pomoc innym.",
     period: "Literatura współczesna",
     externalResources: [
       {
@@ -712,6 +752,8 @@ export const appData: Items = [
     id: 19,
     title: "Rok 1984",
     author: "George Orwell",
+    description:
+      "Dystopijna powieść ukazująca totalitarne państwo, w którym władza kontroluje każdy aspekt życia obywateli. Główny bohater, Winston Smith, buntuje się przeciwko reżimowi Partii, jednak jego próba odzyskania wolności kończy się porażką. Orwell przedstawia mechanizmy manipulacji, cenzury i inwigilacji, które prowadzą do zniewolenia jednostki. Powieść jest ostrzeżeniem przed konsekwencjami utraty wolności i zagrożeniem wynikającym z absolutnej władzy.",
     period: "Literatura współczesna",
     externalResources: [
       {
@@ -744,8 +786,30 @@ export const appData: Items = [
   {
     id: 20,
     title: "Tango",
+    description:
+      "Dramat ukazujący konflikt pokoleń i upadek tradycyjnych wartości. Główny bohater, Artur, próbuje przywrócić porządek w rodzinie, w której panuje chaos i brak zasad. Sztuka porusza temat buntu młodego pokolenia wobec liberalizmu oraz krytykuje skrajności zarówno tradycji, jak i nowoczesności. Mrożek w ironiczny sposób pokazuje, jak trudno znaleźć równowagę między wolnością a zasadami.",
     author: "Sławomir Mrożek",
     period: "Literatura współczesna",
+    questions: [
+      {
+        id: 1,
+        motive: "Bunt przeciwko porządkowi społecznemu",
+        question:
+          "Omów zagadnienie na podstawie Tanga Sławomira Mrożka. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 2,
+        motive: "Problem upadku wartości",
+        question:
+          "Omów zagadnienie na podstawie Tanga Sławomira Mrożka. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 3,
+        motive: "Normy społeczne – ograniczają człowieka czy porządkują życie?",
+        question:
+          "Omów zagadnienie na podstawie Tanga Sławomira Mrożka. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+    ],
     externalResources: [
       {
         title: "Streszczenie i opracowanie na SetkaZPolaka.pl",
@@ -777,8 +841,24 @@ export const appData: Items = [
   {
     id: 21,
     title: "Zdążyć przed Panem Bogiem",
+    description:
+      "Zdążyć przed Panem Bogiem to reportaż Hanny Krall, który porusza temat powstania w getcie warszawskim. Opowiada historię Marka Edelmana, jednego z przywódców powstania, ukazując jego doświadczenia zarówno jako bojownika, jak i lekarza. Dzieło łączy w sobie wątki wojenne z refleksją nad sensem życia, śmierci i ludzkiej godności. Krall przedstawia dramatyczne wybory moralne oraz walkę o człowieczeństwo w ekstremalnych warunkach.",
     author: "Hanna Krall",
     period: "Literatura współczesna",
+    questions: [
+      {
+        id: 1,
+        motive: "Godność w skrajnych sytuacjach",
+        question:
+          "Czy możliwe jest zachowanie godności w skrajnych sytuacjach? Omów zagadnienie na podstawie Zdążyć przed Panem Bogiem Hanny Krall. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 2,
+        motive: "Zagłada z perspektywy świadka",
+        question:
+          "Zagłada z perspektywy świadka i uczestnika wydarzeń w getcie. Omów zagadnienie na podstawie Zdążyć przed Panem Bogiem Hanny Krall. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+    ],
     externalResources: [
       {
         title: "Streszczenie i opracowanie",
