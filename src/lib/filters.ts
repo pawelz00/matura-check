@@ -26,25 +26,26 @@ export function getQuestionsCardsStatusFilterData(
   items: QuestionsData[],
   status: Status,
   questionsStatuses: DataStore["questionsStatuses"],
-) {
+): QuestionsData[] {
   return items
     .map((i) => {
       return {
         ...i,
-        questions: i.questions.filter((q) => {
-          return status
-            ? questionsStatuses[`${i.id}-${q.id}`] === status
-            : false;
-        }),
+        questions:
+          i?.questions?.filter((q) => {
+            return status
+              ? questionsStatuses[`${i.id}-${q.id}`] === status
+              : false;
+          }) ?? null,
       };
     })
-    .filter((i) => i.questions.length);
+    .filter((i) => i?.questions?.length);
 }
 
 export function getQuestionsCardsSearchFilterData(
   items: QuestionsData[],
   search: string,
-) {
+): QuestionsData[] {
   return items
     .map((i) => {
       const matchesTitleOrAuthor =
@@ -52,17 +53,18 @@ export function getQuestionsCardsSearchFilterData(
         i?.author?.toLowerCase().includes(search.toLowerCase()) ||
         i.period.toLowerCase().includes(search.toLowerCase());
 
-      const filteredQuestions = i.questions.filter((q) => {
-        return (
-          q.question.toLowerCase().includes(search.toLowerCase()) ||
-          q.motive.toLowerCase().includes(search.toLowerCase())
-        );
-      });
+      const filteredQuestions =
+        i?.questions?.filter((q) => {
+          return (
+            q.question.toLowerCase().includes(search.toLowerCase()) ||
+            q.motive.toLowerCase().includes(search.toLowerCase())
+          );
+        }) ?? null;
 
       return {
         ...i,
         questions: matchesTitleOrAuthor ? i.questions : filteredQuestions,
       };
     })
-    .filter((i) => i.questions.length);
+    .filter((i) => i?.questions?.length);
 }
