@@ -36,6 +36,21 @@ export const appData: Items = [
         url: "https://www.youtube.com/watch?v=uTo5Myd_M0w",
         type: "video",
       },
+      {
+        title: "Wiadomości ogólne",
+        url: "https://www.bryk.pl/lektury/nieznany/biblia.wiadomosci-ogolne",
+        type: "article",
+      },
+      {
+        title: "Epoki literackie",
+        url: "https://www.epoki-literackie.pl/starozytnosc/biblia/",
+        type: "article",
+      },
+      {
+        title: "Biblia - streszczenie i opracowanie",
+        url: "https://www.youtube.com/watch?v=znHYLu4sdZU&ab_channel=PracowniaLiteracka",
+        type: "video",
+      },
     ],
     questions: [
       {
@@ -1115,6 +1130,406 @@ export const appData: Items = [
         title: "Streszczenie",
         url: "https://poezja.org/wz/interpretacja/4987/Zdazyc_przed_Panem_Bogiem_streszczenie",
         type: "article",
+      },
+    ],
+  },
+  {
+    id: 22,
+    title: 'Górą "Edek"',
+    author: "Marek Nowakowski",
+    description:
+      "Utwór przedstawia realia życia codziennego w PRL, ukazując kontrasty społeczne i przemiany zachodzące w ówczesnej Polsce. Autor z ironią i krytycznym spojrzeniem opisuje ludzi z różnych warstw społecznych, tworząc obraz epoki.",
+    period: "Literatura współczesna",
+    questions: [
+      {
+        id: 1,
+        motive:
+          "W jakim celu autor nawiązuje w swoim tekście do innego tekstu?",
+        question:
+          "Omów zagadnienie na podstawie utworu Górą „Edek” Marka Nowakowskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+    ],
+    externalResources: [
+      {
+        title: "Streszczenie i opracowanie",
+        url: "https://poezja.org/wz/interpretacja/5801/Gora_Edek_streszczenie",
+        type: "article",
+      },
+      {
+        title: "Streszczenie i bohaterowie",
+        url: "https://strefaedukacji.pl/gora-edek-marka-nowakowskiego-o-czym-mowi-opowiadanie-opracowanie-lektury-obowiazkowej-na-maturze/ar/c5-17064029",
+        type: "article",
+      },
+      {
+        title: "Streszczenie",
+        url: "https://knowunity.pl/knows/jzyk-polski-gr-edek-ace52b72-8029-4619-9588-c7846f145275",
+        type: "article",
+      },
+      {
+        title: "Streszczenie szczegółowe",
+        url: "https://www.bryk.pl/lektury/marek-nowakowski/gora-edek.streszczenie-szczegolowe",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na YouTube",
+        url: "https://www.youtube.com/watch?v=a950HWhv9nM",
+        type: "video",
+      },
+    ],
+  },
+  {
+    id: 23,
+    title: "Miejsce",
+    author: "Andrzej Stasiuk",
+    description:
+      "Opowiadanie podejmuje temat pamięci i tożsamości, ukazując znaczenie przeszłości w kształtowaniu współczesnego człowieka. Autor w poetycki sposób opisuje podróż do miejsc związanych z historią osobistą i zbiorową.",
+    period: "Literatura współczesna",
+    questions: [
+      {
+        id: 1,
+        motive: "Jaką wartość dla człowieka ma pamięć o przeszłości?",
+        question:
+          "Omów zagadnienie na podstawie Miejsca Andrzeja Stasiuka. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+    ],
+    externalResources: [
+      {
+        title: "Streszczenie",
+        url: "https://poezja.org/wz/interpretacja/5817/Miejsce_streszczenie",
+        type: "article",
+      },
+      {
+        title: "Streszczenie i opracowanie",
+        url: "https://knowunity.pl/knows/jzyk-polski-miejsce-3fc235f1-b28f-479f-97e0-b4b733596bff",
+        type: "article",
+      },
+      {
+        title: "Streszczenie szczegółowe",
+        url: "https://www.bryk.pl/lektury/andrzej-stasiuk/miejsce.streszczenie-szczegolowe",
+        type: "article",
+      },
+      {
+        title: "Streszczenie i plan wydarzeń",
+        url: "https://eszkola.pl/jezyk-polski/miejsce-streszczenie-i-plan-wydarzen-11200.html",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na YouTube",
+        url: "https://www.youtube.com/watch?v=hXWmWMGtg5Y",
+        type: "video",
+      },
+    ],
+  },
+  {
+    id: 24,
+    title: "Profesor Andrews w Warszawie",
+    author: "Olga Tokarczuk",
+    description:
+      "Opowiadanie przedstawia losy profesora, który podczas pobytu w Polsce doświadcza trudnej rzeczywistości stanu wojennego. Utwór ukazuje wrażenia obcokrajowca wobec systemu totalitarnego i ludzkiej codzienności w czasach opresji.",
+    period: "Literatura współczesna",
+    questions: [
+      {
+        id: 1,
+        motive: "Stan wojenny z perspektywy obcokrajowca",
+        question:
+          "Omów zagadnienie na podstawie utworu Profesor Andrews w Warszawie Olgi Tokarczuk. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+    ],
+    externalResources: [
+      {
+        title: "Streszczenie",
+        url: "https://setkazpolaka.pl/profesor-andrews-w-warszawie-streszczenie/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie i bohaterowie",
+        url: "https://strefaedukacji.pl/olga-tokarczuk-profesor-andrews-w-warszawie-streszczenie-lektury-bohaterowie-motywy-najwazniejsze-informacje-o-utworze/ar/c5-17169387",
+        type: "article",
+      },
+      {
+        title: "Streszczenie",
+        url: "https://poezja.org/wz/interpretacja/5803/Profesor_Andrews_w_Warszawie_streszczenie",
+        type: "article",
+      },
+      {
+        title: "Streszczenie szczegółowe",
+        url: "https://www.bryk.pl/lektury/olga-tokarczuk/profesor-andrews-w-warszawie.streszczenie-szczegolowe",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na YouTube",
+        url: "https://www.youtube.com/watch?v=ZzDp38rffqM",
+        type: "video",
+      },
+    ],
+  },
+  {
+    id: 25,
+    title: "Podróże z Herodotem",
+    author: "Ryszard Kapuściński",
+    description:
+      "Esej łączy wątki podróżnicze z refleksją nad historią i literaturą. Autor zestawia własne doświadczenia z dziełem Herodota, poszukując uniwersalnych prawd o ludzkiej naturze i kulturze.",
+    period: "Literatura współczesna",
+    questions: [
+      {
+        id: 1,
+        motive: "Czym dla człowieka może być podróżowanie?",
+        question:
+          "Omów zagadnienie na podstawie znanych Ci fragmentów Podróży z Herodotem Ryszarda Kapuścińskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+    ],
+    externalResources: [
+      {
+        title: "Streszczenie i opracowanie na YouTube",
+        url: "https://www.youtube.com/watch?v=ZZ0LGpICjRE",
+        type: "video",
+      },
+      {
+        title: "Streszczenie i bohaterowie",
+        url: "https://matura.greg.pl/polski,podroze-z-herodotem-ryszard-kapuscinski-opracowanie",
+        type: "article",
+      },
+      {
+        title: "Streszczenie",
+        url: "https://www.bryk.pl/wypracowania/jezyk-polski/streszczenia-i-plany-wydarzen/1010613-podroze-z-herodotem-streszczenie.html",
+        type: "article",
+      },
+      {
+        title: "Streszczenie i problematyka",
+        url: "https://knowunity.pl/knows/jzyk-polski-herodot-czytany-przez-kapuciskiegor-kapuciski-podre-z-herodotem-89bf3e1d-57a3-4ef1-9e52-3343f56e499f",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na YouTube",
+        url: "https://www.youtube.com/watch?v=BhE7X0p8XAk",
+        type: "video",
+      },
+    ],
+  },
+  {
+    id: 26,
+    title: "Ferdydurke",
+    author: "Witold Gombrowicz",
+    description:
+      "Powieść groteskowa ukazująca mechanizmy zniewolenia jednostki przez formy społeczne. Autor w satyryczny sposób przedstawia absurdy wychowania, konwenansów i relacji międzyludzkich.",
+    period: "Literatura współczesna",
+    questions: [
+      {
+        id: 1,
+        motive: "Groteskowy obraz świata",
+        question:
+          "Omów zagadnienie na podstawie znanych Ci fragmentów Ferdydurke Witolda Gombrowicza. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 2,
+        motive: "Człowiek wobec presji otoczenia",
+        question:
+          "Omów zagadnienie na podstawie znanych Ci fragmentów Ferdydurke Witolda Gombrowicza. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+    ],
+    externalResources: [
+      {
+        title: "Streszczenie i opracowanie do matury",
+        url: "https://studniowkamaturalna.pl/ferdydurke-streszczenie-opracowanie/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie i bohaterowie",
+        url: "https://setkazpolaka.pl/ferdydurke-streszczenie-bohaterowie/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie szczegółowe",
+        url: "https://ostatnidzwonek.pl/ferdydurke/a-705.html",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na Poezja.org",
+        url: "https://poezja.org/wz/interpretacja/5240/Ferdydurke_streszczenie",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na YouTube",
+        url: "https://www.youtube.com/watch?v=S3iqU4dBnYc",
+        type: "video",
+      },
+    ],
+  },
+  {
+    id: 27,
+    title: "Proszę państwa do gazu",
+    author: "Tadeusz Borowski",
+    description:
+      "Opowiadanie ukazuje brutalne realia życia w obozie koncentracyjnym. Autor w sposób chłodny i pozbawiony patosu przedstawia losy więźniów, odsłaniając mechanizmy odczłowieczenia i degradacji moralnej.",
+    period: "Literatura współczesna",
+    questions: [
+      {
+        id: 1,
+        motive: "„Człowiek zlagrowany” jako ofiara zbrodniczego systemu",
+        question:
+          "Omów zagadnienie na podstawie utworu Proszę państwa do gazu Tadeusza Borowskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+    ],
+    externalResources: [
+      {
+        title: "Streszczenie",
+        url: "https://poezja.org/wz/interpretacja/3604/Prosze_panstwa_do_gazu_streszczenie",
+        type: "article",
+      },
+      {
+        title: "Streszczenie i bohaterowie",
+        url: "https://knowunity.pl/knows/jzyk-polski-prosz-pastwa-do-gazu-tadeusz-borowski-3b0c1751-5e20-4527-8886-827393f1b071",
+        type: "article",
+      },
+      {
+        title: "Streszczenie szczegółowe",
+        url: "https://www.bryk.pl/lektury/tadeusz-borowski/prosze-panstwa-do-gazu.streszczenie-szczegolowe",
+        type: "article",
+      },
+      {
+        title: "Streszczenie",
+        url: "https://www.bryk.pl/wypracowania/jezyk-polski/streszczenia-i-plany-wydarzen/1010395-prosze-panstwa-do-gazu-tadeusz-borowski-streszczenie.html",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na YouTube",
+        url: "https://www.youtube.com/watch?v=Qz4Z8KmKwqU",
+        type: "video",
+      },
+    ],
+  },
+  {
+    id: 28,
+    title: "Inny świat",
+    author: "Gustaw Herling-Grudziński",
+    description:
+      "Wspomnienia autora z pobytu w sowieckim łagrze, ukazujące okrutne warunki życia i moralne dylematy więźniów. Utwór stanowi świadectwo cierpienia i walki o zachowanie człowieczeństwa w nieludzkich realiach.",
+    period: "Literatura współczesna",
+    questions: [
+      {
+        id: 1,
+        motive: "Jakie znaczenie ma tytuł dla odczytania sensu utworu?",
+        question:
+          "Omów zagadnienie na podstawie znanych Ci fragmentów Innego świata Gustawa Herlinga-Grudzińskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 2,
+        motive: "Konsekwencje zniewolenia człowieka",
+        question:
+          "Omów zagadnienie na podstawie znanych Ci fragmentów Innego świata Gustawa Herlinga-Grudzińskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+    ],
+    externalResources: [
+      {
+        title: "Streszczenie i opracowanie",
+        url: "https://setkazpolaka.pl/inny-swiat-streszczenie-i-opracowanie/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie",
+        url: "https://www.bryk.pl/wypracowania/jezyk-polski/streszczenia-i-plany-wydarzen/1010758-inny-swiat-gustaw-herling-grudzinski.html",
+        type: "article",
+      },
+      {
+        title: "Streszczenie i bohaterowie",
+        url: "https://knowunity.pl/knows/jzyk-polski-inny-wiat-notatka-i-streszczenie-3eef2344-937d-4ee0-936c-3f7098207c67",
+        type: "article",
+      },
+      {
+        title: "Streszczenie",
+        url: "https://poezja.org/wz/interpretacja/4954/Inny_swiat_streszczenie",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na YouTube",
+        url: "https://www.youtube.com/watch?v=lCjKETKsS_M",
+        type: "video",
+      },
+    ],
+  },
+  {
+    id: 29,
+    title: "Chłopi",
+    author: "Władysław Reymont",
+    description:
+      "Realistyczna powieść ukazująca życie polskiej wsi na przełomie XIX i XX wieku. Reymont szczegółowo opisuje codzienność, obyczaje i hierarchię społeczną mieszkańców Lipiec. Utwór porusza tematy związane z tradycją, naturą oraz konfliktem między jednostką a społecznością.",
+    period: "Młoda Polska",
+    questions: [
+      {
+        id: 1,
+        motive: "Obyczaj i tradycja w życiu społeczeństwa",
+        question:
+          "Omów zagadnienie na podstawie znanych Ci fragmentów Chłopów Władysława Stanisława Reymonta. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+    ],
+    externalResources: [
+      {
+        title: "Streszczenie i bohaterowie",
+        url: "https://knowunity.pl/knows/jzyk-polski-chopi-tom-1-wadysaw-stanisaw-reymont-93043e98-a708-445c-b02d-4d6be0726b43",
+        type: "article",
+      },
+      {
+        title: "Streszczenie i opracowanie",
+        url: "https://babaodpolskiego.pl/wladyslaw-stanislaw-reymont-chlopi-streszczenie-i-opracowanie/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie",
+        url: "https://poezja.org/wz/interpretacja/4926/Chlopi_streszczenie",
+        type: "article",
+      },
+      {
+        title: "Streszczenie krótkie",
+        url: "https://www.bryk.pl/lektury/wladyslaw-stanislaw-reymont/chlopi-t-i.streszczenie-krotkie",
+        type: "article",
+      },
+      {
+        title: "Streszczenie i opracowanie na YouTube",
+        url: "https://www.youtube.com/watch?v=pgWB-AhZ3sE",
+        type: "video",
+      },
+    ],
+  },
+  {
+    id: 30,
+    title: "Potop (fragmenty)",
+    author: "Henryk Sienkiewicz",
+    description:
+      "Fragmenty powieści historycznej ukazujące losy Andrzeja Kmicica na tle najazdu szwedzkiego w XVII wieku. Utwór przedstawia dramatyczne wybory bohatera, jego drogę od hańby do odkupienia oraz rolę patriotyzmu w życiu jednostki. Sienkiewicz podkreśla postawy odwagi, honoru i poświęcenia dla ojczyzny.",
+    period: "Pozytywizm",
+    questions: [
+      {
+        id: 1,
+        motive: "Postawy odwagi i tchórzostwa",
+        question:
+          "Omów zagadnienie na podstawie znanych Ci fragmentów Potopu Henryka Sienkiewicza. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+    ],
+    externalResources: [
+      {
+        title: "Streszczenie szczegółowe na Knowunity",
+        url: "https://knowunity.pl/knows/jzyk-polski-potop-henryk-sienkiewicz-7f377d64-11dc-491e-a2d2-313f7484e14d",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na SetkaZPolaka.pl",
+        url: "https://setkazpolaka.pl/potop-streszczenie-henryk-sienkiewicz/",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na Bryk.pl",
+        url: "https://www.bryk.pl/lektury/henryk-sienkiewicz/potop.streszczenie-krotkie",
+        type: "article",
+      },
+      {
+        title: "Streszczenie na Poezja.org",
+        url: "https://poezja.org/wz/interpretacja/6380/Potop_streszczenie",
+        type: "article",
+      },
+      {
+        title: "Streszczenie i opracowanie na YouTube",
+        url: "https://www.youtube.com/watch?v=PbrDY1q6EtM",
+        type: "video",
       },
     ],
   },

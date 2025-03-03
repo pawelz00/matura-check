@@ -15,18 +15,24 @@ export default function CardBody({ item }: { item: Item }) {
         <p className="text-sm text-card-foreground/65">{item.description}</p>
       </div>
 
-      <div className="space-y-2">
-        <h3 className="text-md font-medium text-card-foreground">Motywy</h3>
-        <div className="flex flex-wrap gap-2">
-          {item?.questions?.map((item) => {
-            return (
-              <Badge variant={"accent"} key={item.question}>
-                {item.motive}
-              </Badge>
-            );
-          })}
+      {(item?.questions?.length ?? 0) > 0 && (
+        <div className="space-y-2">
+          <h3 className="text-md font-medium text-card-foreground">Motywy</h3>
+          <div className="flex flex-wrap gap-2.5">
+            {item?.questions?.map((item) => {
+              return (
+                <Badge
+                  variant={"accent"}
+                  key={item.question}
+                  className={"whitespace-pre-wrap"}
+                >
+                  {item.motive}
+                </Badge>
+              );
+            })}
+          </div>
         </div>
-      </div>
+      )}
 
       <Separator />
 

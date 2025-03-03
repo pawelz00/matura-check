@@ -50,11 +50,11 @@ export default function Stats({ mode = "default" }: StatsProps) {
     <section
       className={"w-full flex flex-wrap gap-3 items-center justify-between p-3"}
     >
-      <div className={"flex text-sm gap-x-3"}>
+      <div className={"flex flex-wrap gap-y-1.5 text-sm gap-x-3"}>
         {Object.values(statusesObj).map((item) => (
           <Badge
             className={cn(
-              `cursor-pointer ${item.hoverColor}`,
+              `cursor-pointer ${item.hoverColor} min-w-28`,
               status === item.status && `${item.bgColor}`,
             )}
             variant={"outline"}
