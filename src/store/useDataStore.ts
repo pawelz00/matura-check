@@ -92,23 +92,28 @@ export const useDataStore = create<DataStore>((set) => {
       set((state) => ({
         groupBy: field,
         groupedData: field
-          ? state.data.reduce(
-              (acc, item) => {
-                let key: string | null = null;
+          ? Object.fromEntries(
+              Object.entries(
+                state.data.reduce(
+                  (acc, item) => {
+                    let key: string | null = null;
 
-                if (field === "author") key = item.author;
-                if (field === "period") key = item.period;
-                if (field === "motive")
-                  key =
-                    item.questions?.map((q) => q.motive).join(", ") ||
-                    "Unknown";
+                    if (field === "author") key = item.author;
+                    if (field === "period") key = item.period;
+                    if (field === "motive")
+                      key =
+                        item.questions?.map((q) => q.motive).join(", ") ||
+                        "Unknown";
 
-                if (key) {
-                  acc[key] = acc[key] ? [...acc[key], item] : [item];
-                }
-                return acc;
-              },
-              {} as Record<string, Items>,
+                    if (key) {
+                      acc[key] = acc[key] ? [...acc[key], item] : [item];
+                    }
+
+                    return acc;
+                  },
+                  {} as Record<string, Items>,
+                ),
+              ).sort(([keyA], [keyB]) => keyA.localeCompare(keyB)),
             )
           : null,
       })),
