@@ -1,10 +1,3 @@
-import { statusesObj } from "@/constants/statusesObject.ts";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip.tsx";
 import { Button } from "@/components/ui/button.tsx";
 import { cn } from "@/lib/utils.ts";
 import { GridIcon, ListIcon } from "lucide-react";
@@ -17,7 +10,7 @@ export type FiltersProps = {
 };
 
 export default function Filters({ showButtonFilters = true }: FiltersProps) {
-  const { view, setView, status, setStatus } = useFiltersStore();
+  const { view, setView } = useFiltersStore();
 
   return (
     <section
@@ -33,39 +26,7 @@ export default function Filters({ showButtonFilters = true }: FiltersProps) {
           <ButtonFilter filter={"motive"}>Motyw</ButtonFilter>
         </div>
       )}
-      <div
-        className={
-          "flex gap-x-3 items-center ml-auto border border-dotted p-1 rounded-full px-2"
-        }
-      >
-        {Object.entries(statusesObj).map(([key, value]) => {
-          return (
-            <TooltipProvider key={key}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Button
-                    onClick={() => {
-                      setStatus(status === value.status ? null : value.status);
-                    }}
-                    key={key}
-                    variant={"outline"}
-                    size={"icon"}
-                    className={cn(
-                      "cursor-pointer size-6 rounded-full hover:bg-primary hover:text-primary-foreground",
-                      status === value.status &&
-                        "bg-primary text-primary-foreground",
-                    )}
-                  >
-                    <value.icon className={"size-4"} />
-                  </Button>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{value.text}</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-          );
-        })}
+      <div className={"flex gap-x-3 items-center ml-auto"}>
         <Button
           onClick={() => {
             setView(view === "list" ? "grid" : "list");

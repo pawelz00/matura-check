@@ -3,6 +3,8 @@ import { useMemo } from "react";
 import { Badge } from "@/components/ui/badge.tsx";
 import Counter from "@/components/counter.tsx";
 import { statusesObj } from "@/constants/statusesObject.ts";
+import { useFiltersStore } from "@/store/useFiltersStore.ts";
+import { cn } from "@/lib/utils.ts";
 
 type Stats = {
   learned: number;
@@ -17,6 +19,7 @@ export type StatsProps = {
 
 export default function Stats({ mode = "default" }: StatsProps) {
   const { statuses, questionsStatuses } = useDataStore();
+  const { status, setStatus } = useFiltersStore();
 
   const stats: Stats = useMemo(() => {
     return Object.values(
@@ -48,11 +51,21 @@ export default function Stats({ mode = "default" }: StatsProps) {
       className={"w-full flex flex-wrap gap-3 items-center justify-between p-3"}
     >
       <div className={"flex text-sm gap-x-3"}>
-        {Object.values(statusesObj).map((status) => (
-          <Badge variant={"outline"} key={status.text}>
-            <status.icon className={status.textColor} />
+        {Object.values(statusesObj).map((item) => (
+          <Badge
+            className={cn(
+              `cursor-pointer ${item.hoverColor}`,
+              status === item.status && `${item.bgColor}`,
+            )}
+            variant={"outline"}
+            key={item.text}
+            onClick={() => {
+              setStatus(status === item.status ? null : item.status);
+            }}
+          >
+            <item.icon className={item.textColor} />
             <span>
-              {status.text}: {stats?.[status.status] ?? 0}
+              {item.text}: {stats?.[item.status] ?? 0}
             </span>
           </Badge>
         ))}

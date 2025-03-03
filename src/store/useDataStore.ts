@@ -7,7 +7,7 @@ export type QuestionsData = {
   title: string;
   author: string | null;
   period: string;
-  questions: Questions;
+  questions: Questions | null;
 };
 
 export interface DataStore {

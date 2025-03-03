@@ -16,7 +16,7 @@ export default function CardBody({ item }: { item: QuestionsData }) {
     return questionsStatuses[`${item.id}-${questionId}`];
   }
 
-  return item.questions.map((q) => (
+  return item?.questions?.map((q) => (
     <CardContent
       key={q.question + q.id}
       className="mt-6 space-y-6 flex w-full items-center justify-between"
