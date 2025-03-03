@@ -7,7 +7,6 @@ import { CardHeader, CardTitle } from "@/components/ui/card.tsx";
 import {
   Tooltip,
   TooltipContent,
-  TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip.tsx";
 
@@ -24,29 +23,27 @@ export default function CardHead({ item }: { item: Item }) {
         <div className="flex gap-3">
           {Object.entries(statusesObj).map(([key, value]) => {
             return (
-              <TooltipProvider key={key}>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Button
-                      variant={"ghost"}
-                      size={"icon"}
-                      className={cn(
-                        statuses[item.id] === value.status &&
-                          "bg-primary/20 text-card-foreground",
-                        "hover:bg-primary/20 hover:text-card-foreground cursor-pointer",
-                      )}
-                      onClick={() => {
-                        setStatus(item.id, value.status);
-                      }}
-                    >
-                      <value.icon className={"size-4"} />
-                    </Button>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>{value.text}</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
+              <Tooltip key={key}>
+                <TooltipTrigger asChild>
+                  <Button
+                    variant={"ghost"}
+                    size={"icon"}
+                    className={cn(
+                      statuses[item.id] === value.status &&
+                        "bg-primary/20 text-card-foreground",
+                      "hover:bg-primary/20 hover:text-card-foreground cursor-pointer",
+                    )}
+                    onClick={() => {
+                      setStatus(item.id, value.status);
+                    }}
+                  >
+                    <value.icon className={"size-4"} />
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{value.text}</p>
+                </TooltipContent>
+              </Tooltip>
             );
           })}
         </div>
