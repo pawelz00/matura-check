@@ -17,7 +17,7 @@ export type Item = {
     url: string;
     type?: "video" | "article";
   }[];
-  questions?: Questions;
+  questions: Questions | null;
 };
 
 export type Items = Item[];
@@ -28,7 +28,7 @@ export const appData: Items = [
     title: "Biblia",
     author: null,
     description:
-      "Zbiór ksiąg religijnych judaizmu i chrześcijaństwa. Składa się z dwóch części: Starego i Nowego Testamentu. Biblia jest jednym z najważniejszych dzieł literatury światowej. Zawiera m.in. opowieści o stworzeniu świata, historię Izraela, życie i nauczanie Jezusa Chrystusa.",
+      "Zbiór świętych ksiąg, który stanowi fundament dla judaizmu i chrześcijaństwa. Składa się z dwóch głównych części: Starego Testamentu i Nowego Testamentu. Stary Testament opowiada o stworzeniu świata, historii Izraela, przymierzach Boga z ludźmi, a także o prorokach i prawach moralnych. Nowy Testament koncentruje się na życiu, naukach, śmierci i zmartwychwstaniu Jezusa Chrystusa oraz początkach Kościoła chrześcijańskiego. Biblia jest źródłem duchowego nauczania, moralności, a także inspiracją dla literatury, sztuki i filozofii na przestrzeni wieków.",
     period: "Starożytność",
     externalResources: [
       {
@@ -63,7 +63,7 @@ export const appData: Items = [
     title: "Mitologia (cz. I Grecja)",
     author: "Jan Parandowski",
     description:
-      "Zbiór opowieści o bogach i herosach starożytnej Grecji, ukazujący ich losy, relacje i wpływ na kulturę europejską. Mitologia była podstawą wierzeń i inspiracją dla sztuki i literatury. ",
+      "Zbiór opowieści o bogach, herosach i mitycznych wydarzeniach, które kształtowały starożytną Grecję. Autor przedstawia bogów Olimpijskich, takich jak Zeus, Hera, Atena czy Apollo, oraz ich wpływ na losy ludzi. Opisuje także historie legendarnych bohaterów, jak Herkules, Perseusz czy Odyseusz, którzy przeżywają niezwykłe przygody i zmagają się z boskimi i ludzkimi przeciwnościami. Parandowski ukazuje, jak mitologia grecka kształtowała wierzenia, wartości i wyobrażenia o świecie starożytnych Greków, pozostając fundamentem dla literatury, sztuki i kultury Zachodu.",
     period: "Starożytność",
     questions: [
       {
@@ -119,7 +119,7 @@ export const appData: Items = [
     title: "Iliada",
     author: "Homer",
     description:
-      "Epos grecki opisujący wydarzenia wojny trojańskiej, skupiający się na losach Achillesa. Przedstawia bohaterstwo, gniew i losy ludzi wplecione w wolę bogów.",
+      "Epicki poemat, który opowiada o wydarzeniach podczas ostatniego roku wojny trojańskiej. Głównym tematem jest gniew Achillesa, najdzielniejszego z greckich wojowników, który z powodu obrazy jego honoru wycofuje się z walki, co ma tragiczne konsekwencje dla całej armii greckiej. Poemat ukazuje nie tylko dramatyczne wydarzenia wojenne, ale również refleksje nad losem, boską interwencją, bohaterstwem, honorami oraz przemijaniem życia. Homer w Iliadzie przedstawia wojną jako tło dla ukazania ludzkich emocji, ambicji i tragicznych dylematów, będąc jednym z fundamentów literatury zachodniej.",
     period: "Starożytność",
     questions: [
       {
@@ -241,7 +241,7 @@ export const appData: Items = [
     title: "Rozmowa Mistrza Polikarpa ze Śmiercią",
     author: "Anonim",
     description:
-      "Średniowieczny utwór ukazujący dialog człowieka ze Śmiercią, który przedstawia motyw danse macabre i nieuchronność śmierci. ",
+      "Dialog filozoficzny, który porusza temat nieuchronności śmierci i ludzkiego losu. Mistrz Polikarp, starszy mężczyzna, spotyka Śmierć, która przychodzi po niego, ale próbuje negocjować, szukając sposobu na uniknięcie tego losu. W rozmowie z personifikowaną Śmiercią, Polikarp wyraża lęk i sprzeciw wobec nieuchronności śmierci, jednocześnie starając się zrozumieć jej sens. Utwór podejmuje tematykę ludzkiej słabości, przemijania oraz stawiania oporu wobec nieuniknionego końca. Kochanowski w tym dziele łączy elementy filozoficzne z poetycką refleksją nad naturą śmierci i życiem człowieka.",
     period: "Średniowiecze",
     questions: [
       {
@@ -284,7 +284,7 @@ export const appData: Items = [
     title: "Pieśń o Rolandzie",
     author: "Anonim",
     description:
-      "Epos rycerski opisujący losy Rolanda i jego lojalność wobec króla Karola Wielkiego. Ukazuje etos rycerski, poświęcenie i honor w walce. ",
+      "Epos rycerski, który opowiada o bohaterskiej śmierci Rolandza, jednego z najodważniejszych rycerzy Karola Wielkiego. Akcja utworu toczy się podczas wojny z Saracenami, a tytułowy bohater staje się symbolem lojalności, honoru i poświęcenia. Roland, nie chcąc zdradzić swoich towarzyszy, nie ostrzega Karola o nadchodzącym niebezpieczeństwie, co prowadzi do jego tragicznej śmierci. Epos porusza tematy honoru, lojalności wobec władcy, a także poświęcenia dla dobra ojczyzny. “Pieśń o Rolandzie” jest jednym z najstarszych i najważniejszych dzieł literatury francuskiej, będąc symbolem rycerskich cnót i średniowiecznego ideału.",
     period: "Średniowiecze",
     questions: [
       {
@@ -327,7 +327,7 @@ export const appData: Items = [
     title: "Makbet",
     author: "William Szekspir",
     description:
-      "Tragedia przedstawiająca historię Makbeta, którego ambicja i żądza władzy prowadzą do moralnego upadku. Ukazuje wpływ losu i manipulacji na decyzje człowieka. ",
+      "Tragedia, która ukazuje upadek tytułowego bohatera, szkockiego władcy, który, kierując się ambicją i manipulacjami żony, dokonuje morderstwa króla Duncana, by przejąć tron. Zbrodnia prowadzi do coraz głębszej paranoi, zniszczenia moralności i ostatecznej zguby Makbeta, który zostaje osaczony przez własne wyrzuty sumienia i przewidywaną karę. Szekspir porusza w dziele tematy władzy, lojalności, winy oraz nieuchronności losu. “Makbet” to opowieść o destrukcyjnym wpływie ambicji i moralnych konsekwencjach zbrodni, które prowadzą do tragedii zarówno jednostki, jak i całego królestwa.",
     period: "Renesans",
     questions: [
       {
@@ -381,7 +381,7 @@ export const appData: Items = [
     id: 9,
     title: "Skąpiec",
     description:
-      "Komedia o chciwości i obsesyjnym gromadzeniu bogactwa. Ukazuje konsekwencje skrajnego materializmu i braku wartości duchowych.",
+      "Komedia, która ukazuje postać Harpagona, skąpego i egoistycznego ojca, który za wszelką cenę pragnie zachować swoje bogactwo. Jego obsesja na punkcie pieniędzy doprowadza do konfliktów z rodziną, zwłaszcza z dziećmi, które pragną zawrzeć miłość, a nie małżeństwo aranżowane z powodu majątku. Molier w mistrzowski sposób ukazuje wady skąpstwa, przez które Harpagon staje się postacią śmieszną, ale również tragiczną w swojej niezdolności do otwarcia się na ludzkie wartości. Komedia kończy się konfrontacją bohatera z jego własnym szaleństwem, co stanowi krytykę chciwości i materializmu.",
     author: "Molier",
     period: "Barok",
     questions: [
@@ -429,6 +429,8 @@ export const appData: Items = [
   {
     id: 10,
     title: "Satyra (wybrana)",
+    description:
+      "Utwory, w których autor zgryźliwie komentuje i krytykuje współczesne mu społeczeństwo, moralność oraz obyczaje. Krasiński, z właściwą dla siebie ironią, ukazuje w nich absurdalne postawy i wady ludzkie, które szkodzą zarówno jednostce, jak i narodowi. Jego satyry często dotyczą kwestii narodowych, politycznych oraz religijnych, a także przedstawiają zderzenie idei oświeceniowych z tradycją. Krasiński w sposób wyrazisty ukazuje niepokój o przyszłość kraju, będącego wówczas pod zaborami, a jego satyry są pełne gorzkiej refleksji nad stanem społeczeństwa i jego wartościami.",
     author: "Ignacy Krasicki",
     period: "Oświecenie",
     questions: [
@@ -470,6 +472,8 @@ export const appData: Items = [
   {
     id: 11,
     title: "Romantyczność",
+    description:
+      "Jeden z pierwszych utworów polskiego romantyzmu, który w sposób manifestacyjny ukazuje odrzucenie klasycyzmu na rzecz indywidualizmu, emocji i subiektywnego postrzegania świata. Wiersz opowiada o spotkaniu młodej dziewczyny z duchem zmarłego ukochanego, co symbolizuje triumf uczuć i duchowej rzeczywistości nad racjonalnym myśleniem. Mickiewicz w “Romantyczności” przedstawia także krytykę ograniczeń oświeceniowego rozumu i podkreśla znaczenie intuicji, wiary oraz przekonań metafizycznych. Utwór jest wyrazem romantycznej fascynacji tajemnicą, ludzką duchowością i światem zjawisk nadprzyrodzonych.",
     author: "Adam Mickiewicz",
     period: "Romantyzm",
     questions: [
@@ -517,8 +521,48 @@ export const appData: Items = [
   {
     id: 12,
     title: "Dziady cz. III",
+    description:
+      "Dramat romantyczny, który stanowi jedną z najważniejszych części cyklu “Dziady”. Akcja rozgrywa się w czasach zaborów, a głównym tematem jest walka o wolność narodową i moralne cierpienie jednostki. Dramat ukazuje męczeństwo i poświęcenie bohaterów narodowych, a także ich kontakt z duchami przeszłości. Mickiewicz porusza kwestie religijne, patriotyczne oraz filozoficzne, ukazując wewnętrzne dylematy i duchową walkę o zbawienie. W “Dziadach cz. III” pojawiają się także motywy mesjanistyczne, które mają ukazać Polskę jako naród wybrany do wyzwolenia.",
     author: "Adam Mickiewicz",
     period: "Romantyzm",
+    questions: [
+      {
+        id: 1,
+        motive: "Losy młodzieży polskiej pod zaborami.",
+        question:
+          "Omów zagadnienie na podstawie Dziadów części III Adama Mickiewicza. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 2,
+        motive: "Mesjanizm jako romantyczna idea poświęcenia.",
+        question:
+          "Omów zagadnienie na podstawie Dziadów części III Adama Mickiewicza. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 3,
+        motive: "Postawy społeczeństwa polskiego wobec zaborcy.",
+        question:
+          "Omów zagadnienie na podstawie Dziadów części III Adama Mickiewicza. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 4,
+        motive: "Różne postawy człowieka wobec Boga.",
+        question:
+          "Omów zagadnienie na podstawie Dziadów części III Adama Mickiewicza. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 5,
+        motive: "Jakie prawdy o człowieku ujawniają jego sny albo widzenia?",
+        question:
+          "Omów zagadnienie na podstawie Dziadów części III Adama Mickiewicza. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 6,
+        motive: "W jakim celu twórca nawiązuje do motywów biblijnych?",
+        question:
+          "Omów zagadnienie na podstawie Dziadów części III Adama Mickiewicza. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+    ],
     externalResources: [
       {
         title: "Streszczenie szczegółowe na SetkaZPolaka.pl",
@@ -550,8 +594,56 @@ export const appData: Items = [
   {
     id: 13,
     title: "Lalka",
+    description:
+      "Powieść obyczajowa ukazująca życie społeczne Warszawy w drugiej połowie XIX wieku. Głównym bohaterem jest Stanisław Wokulski, który zakochuje się w Izabeli Łęckiej, próbując zdobyć jej serce. Powieść porusza tematy miłości, ambicji, moralności i upadku wartości.",
     author: "Bolesław Prus",
     period: "Pozytywizm",
+    questions: [
+      {
+        id: 1,
+        motive: "Miłość – siła destrukcyjna czy motywująca do działania?",
+        question:
+          "Omów zagadnienie na podstawie Lalki Bolesława Prusa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 2,
+        motive: "Różne oblicza przyjaźni",
+        question:
+          "Omów zagadnienie na podstawie Lalki Bolesława Prusa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 3,
+        motive: "Praca jako pasja człowieka",
+        question:
+          "Omów zagadnienie na podstawie Lalki Bolesława Prusa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 4,
+        motive:
+          "Jaką rolę w relacjach międzyludzkich odgrywają majątek i pochodzenie?",
+        question:
+          "Omów zagadnienie na podstawie Lalki Bolesława Prusa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 5,
+        motive: "Konfrontacja marzeń z rzeczywistością",
+        question:
+          "Omów zagadnienie na podstawie Lalki Bolesława Prusa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 6,
+        motive:
+          "Jakie cechy charakteru ułatwiają człowiekowi osiągnięcie celu?",
+        question:
+          "Omów zagadnienie na podstawie Lalki Bolesława Prusa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 7,
+        motive: "Miasto – przestrzeń przyjazna czy wroga człowiekowi?",
+        question:
+          "Omów zagadnienie na podstawie Lalki Bolesława Prusa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+    ],
     externalResources: [
       {
         title: "Streszczenie szczegółowe na Bryk.pl",
@@ -583,8 +675,36 @@ export const appData: Items = [
   {
     id: 14,
     title: "Zbrodnia i kara",
+    description:
+      "Powieść psychologiczna ukazująca wewnętrzne rozterki Rodiona Raskolnikowa, który popełnia morderstwo lichwiarki. Bohater próbuje usprawiedliwić swój czyn teorią o jednostkach wybitnych, mających prawo łamać moralne zasady. Zmagając się z wyrzutami sumienia, stopniowo dojrzewa do przyznania się do winy. Powieść porusza tematy zła, kary, sumienia oraz odkupienia, ukazując złożoność ludzkiej psychiki i moralnych dylematów.",
     author: "Fiodor Dostojewski",
     period: "Realizm",
+    questions: [
+      {
+        id: 1,
+        motive: "Walka człowieka ze swoimi słabościami",
+        question:
+          "Omów zagadnienie na podstawie Zbrodni i kary Fiodora Dostojewskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 2,
+        motive: "Motyw winy i kary",
+        question:
+          "Omów zagadnienie na podstawie Zbrodni i kary Fiodora Dostojewskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 3,
+        motive: "Ile człowiek jest gotów poświęcić dla innych?",
+        question:
+          "Omów zagadnienie na podstawie Zbrodni i kary Fiodora Dostojewskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 4,
+        motive: "Co może determinować ludzkie postępowanie?",
+        question:
+          "Omów zagadnienie na podstawie Zbrodni i kary Fiodora Dostojewskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+    ],
     externalResources: [
       {
         title: "Streszczenie szczegółowe na SetkaZPolaka.pl",
@@ -616,8 +736,42 @@ export const appData: Items = [
   {
     id: 15,
     title: "Wesele",
+    description:
+      "Dramat symboliczny ukazujący podziały społeczne i marazm narodu polskiego na przełomie XIX i XX wieku. Akcja rozgrywa się podczas wesela poety z chłopką, co staje się pretekstem do konfrontacji inteligencji z chłopstwem. W utworze pojawiają się postaci realistyczne i fantastyczne, które symbolizują narodowe mity i marzenia o odzyskaniu niepodległości. Wyspiański krytykuje bierność Polaków i ich niezdolność do działania, tworząc uniwersalne przesłanie o konieczności jedności narodowej.",
     author: "Stanisław Wyspiański",
     period: "Młoda Polska",
+    questions: [
+      {
+        id: 1,
+        motive: "Trudności w porozumieniu między różnymi grupami społecznymi",
+        question:
+          "Co utrudnia porozumienie między przedstawicielami różnych grup społecznych? Omów zagadnienie na podstawie Wesela Stanisława Wyspiańskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 2,
+        motive: "Rola chłopów i inteligencji w sprawie niepodległościowej",
+        question:
+          "Rola chłopów i inteligencji w sprawie niepodległościowej. Omów zagadnienie na podstawie Wesela Stanisława Wyspiańskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 3,
+        motive: "Sen o Polsce czy sąd nad Polską?",
+        question:
+          "Sen o Polsce czy sąd nad Polską? Omów zagadnienie na podstawie Wesela Stanisława Wyspiańskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 4,
+        motive: "Symboliczne znaczenie widm i zjaw",
+        question:
+          "Symboliczne znaczenie widm i zjaw. Omów zagadnienie na podstawie Wesela Stanisława Wyspiańskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 5,
+        motive: "Motyw tańca",
+        question:
+          "Motyw tańca. Omów zagadnienie na podstawie Wesela Stanisława Wyspiańskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+    ],
     externalResources: [
       {
         title: "Streszczenie i opracowanie na YouTube",
@@ -650,8 +804,36 @@ export const appData: Items = [
   {
     id: 16,
     title: "Przedwiośnie",
+    description:
+      "Powieść ukazująca losy Cezarego Baryki na tle wydarzeń historycznych w odradzającej się Polsce. Główny bohater, wychowany w Baku, przyjeżdża do ojczyzny z nadzieją na lepsze życie, lecz zderza się z trudną rzeczywistością społeczną. Powieść porusza problem nierówności społecznych, rewolucji oraz poszukiwania własnej tożsamości. Żeromski ukazuje dylematy młodego pokolenia i ich pragnienie budowy nowego, sprawiedliwego świata.",
     author: "Stefan Żeromski",
     period: "Dwudziestolecie międzywojenne",
+    questions: [
+      {
+        id: 1,
+        motive: "Młodość jako czas kształtowania własnej tożsamości",
+        question:
+          "Omów zagadnienie na podstawie Przedwiośnia Stefana Żeromskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 2,
+        motive: "Wojna i rewolucja jako źródła doświadczeń człowieka",
+        question:
+          "Omów zagadnienie na podstawie Przedwiośnia Stefana Żeromskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 3,
+        motive: "Różne wizje odbudowy Polski po odzyskaniu niepodległości",
+        question:
+          "Omów zagadnienie na podstawie Przedwiośnia Stefana Żeromskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 4,
+        motive: "Jakie znaczenie ma tytuł dla odczytania sensu utworu?",
+        question:
+          "Omów zagadnienie na podstawie Przedwiośnia Stefana Żeromskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+    ],
     externalResources: [
       {
         title: "Streszczenie i opracowanie na SetkaZPolaka.pl",
@@ -683,8 +865,11 @@ export const appData: Items = [
   {
     id: 17,
     title: "Sklepy cynamonowe (opowiadanie)",
+    description:
+      "Oniryczne opowiadanie, w którym rzeczywistość miesza się z fantazją. Narrator, wspominając dzieciństwo, opisuje tajemnicze nocne wędrówki po mieście, pełnym niezwykłych miejsc i postaci. Sklepy symbolizują świat marzeń, tęsknot i niespełnionych pragnień. Utwór łączy realizm z poetycką wizją, ukazując magię codzienności i ulotność ludzkich doznań.",
     author: "Bruno Schulz",
     period: "Dwudziestolecie międzywojenne",
+    questions: null,
     externalResources: [
       {
         title: "Streszczenie na Ostatni Dzwonek",
@@ -720,6 +905,26 @@ export const appData: Items = [
     description:
       "Powieść egzystencjalna, która opisuje epidemię dżumy w Oranie jako metaforę ludzkiego cierpienia i walki z absurdem życia. Główny bohater, doktor Rieux, z poświęceniem walczy z chorobą, mimo świadomości, że jego działania mogą być daremne. Dzieło ukazuje solidarność, heroizm i ludzką godność w obliczu nieuchronnej śmierci. Camus podkreśla, że jedyną odpowiedzią na absurd istnienia jest bunt i bezinteresowna pomoc innym.",
     period: "Literatura współczesna",
+    questions: [
+      {
+        id: 1,
+        motive: "Co skłania człowieka do poświęceń?",
+        question:
+          "Omów zagadnienie na podstawie Dżumy Alberta Camusa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 2,
+        motive: "Człowiek wobec cierpienia i śmierci",
+        question:
+          "Omów zagadnienie na podstawie Dżumy Alberta Camusa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 3,
+        motive: "Czy możliwa jest przyjaźń w sytuacjach skrajnych?",
+        question:
+          "Omów zagadnienie na podstawie Dżumy Alberta Camusa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+    ],
     externalResources: [
       {
         title: "Streszczenie szczegółowe na Bryk.pl",
@@ -755,6 +960,32 @@ export const appData: Items = [
     description:
       "Dystopijna powieść ukazująca totalitarne państwo, w którym władza kontroluje każdy aspekt życia obywateli. Główny bohater, Winston Smith, buntuje się przeciwko reżimowi Partii, jednak jego próba odzyskania wolności kończy się porażką. Orwell przedstawia mechanizmy manipulacji, cenzury i inwigilacji, które prowadzą do zniewolenia jednostki. Powieść jest ostrzeżeniem przed konsekwencjami utraty wolności i zagrożeniem wynikającym z absolutnej władzy.",
     period: "Literatura współczesna",
+    questions: [
+      {
+        id: 1,
+        motive: "Relacje międzyludzkie w rzeczywistości państwa totalitarnego",
+        question:
+          "Omów zagadnienie na podstawie utworu Rok 1984 George’a Orwella. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 2,
+        motive: "Jak zachować wolność w państwie totalitarnym?",
+        question:
+          "Omów zagadnienie na podstawie utworu Rok 1984 George’a Orwella. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 3,
+        motive: "Znaczenie propagandy w państwie totalitarnym",
+        question:
+          "Omów zagadnienie na podstawie utworu Rok 1984 George’a Orwella. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+      {
+        id: 4,
+        motive: "Nowomowa jako sposób na ograniczenie wolności człowieka",
+        question:
+          "Omów zagadnienie na podstawie utworu Rok 1984 George’a Orwella. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
+      },
+    ],
     externalResources: [
       {
         title: "Streszczenie na Poezja.org",
@@ -842,7 +1073,7 @@ export const appData: Items = [
     id: 21,
     title: "Zdążyć przed Panem Bogiem",
     description:
-      "Zdążyć przed Panem Bogiem to reportaż Hanny Krall, który porusza temat powstania w getcie warszawskim. Opowiada historię Marka Edelmana, jednego z przywódców powstania, ukazując jego doświadczenia zarówno jako bojownika, jak i lekarza. Dzieło łączy w sobie wątki wojenne z refleksją nad sensem życia, śmierci i ludzkiej godności. Krall przedstawia dramatyczne wybory moralne oraz walkę o człowieczeństwo w ekstremalnych warunkach.",
+      "Reportaż, który porusza temat powstania w getcie warszawskim. Opowiada historię Marka Edelmana, jednego z przywódców powstania, ukazując jego doświadczenia zarówno jako bojownika, jak i lekarza. Dzieło łączy w sobie wątki wojenne z refleksją nad sensem życia, śmierci i ludzkiej godności. Krall przedstawia dramatyczne wybory moralne oraz walkę o człowieczeństwo w ekstremalnych warunkach.",
     author: "Hanna Krall",
     period: "Literatura współczesna",
     questions: [
