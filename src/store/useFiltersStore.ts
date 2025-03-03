@@ -1,16 +1,20 @@
 import { create } from "zustand";
-import {Status} from "@/store/useDataStore.ts";
+import { Status } from "@/store/useDataStore.ts";
 
 export interface FiltersStore {
-    view: "grid" | "list";
-    setView: (view: "grid" | "list") => void;
-    status: Status | null;
-    setStatus: (status: Status | null) => void;
+  view: "grid" | "list";
+  setView: (view: "grid" | "list") => void;
+  status: Status | null;
+  setStatus: (status: Status | null) => void;
+  search: string;
+  setSearch: (search: string) => void;
 }
 
 export const useFiltersStore = create<FiltersStore>((set) => ({
-    view: "list",
-    setView: (view) => set({ view }),
-    status: null,
-    setStatus: (status) => set({ status }),
+  view: "list",
+  setView: (view) => set({ view }),
+  status: null,
+  setStatus: (status) => set({ status }),
+  search: "",
+  setSearch: (search) => set({ search }),
 }));

@@ -1,128 +1,58 @@
 import { Button } from "@/components/ui/button.tsx";
-import { DataStore, useDataStore } from "@/store/useDataStore.ts";
+import { Link, useLocation } from "@tanstack/react-router";
 import { cn } from "@/lib/utils.ts";
-import { GridIcon, ListIcon } from "lucide-react";
-import { useFiltersStore } from "@/store/useFiltersStore.ts";
-import { statusesObj } from "@/constants/statusesObject.ts";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip.tsx";
 
 export default function Navbar() {
-  const { view, setView, status, setStatus } = useFiltersStore();
+  const location = useLocation();
 
   return (
-    <div
-      className={"flex flex-col gap-y-6 w-full items-center rounded-xl py-6"}
-    >
-      <nav>
+    <div className={"w-full bg-background mx-auto py-6 sticky top-0 z-[99999]"}>
+      <nav className={"w-fit mx-auto"}>
         <ul
           className={
-            "flex justify-between items-center bg-white px-2 h-12 w-fit rounded-2xl gap-x-1 border border-muted"
+            "flex justify-between items-center bg-card px-1.5 h-12 rounded-full gap-x-1.5 border border-dotted"
           }
         >
-          <ButtonNav>Podstawa</ButtonNav>
-          <ButtonNav>Rozszerzenie</ButtonNav>
-          <ButtonNav>Ustna</ButtonNav>
+          <ButtonNav
+            title={"Podstawa"}
+            href={"/"}
+            active={location.pathname === "/"}
+          />
+          <ButtonNav
+            title={"Ustna"}
+            href={"/questions"}
+            active={location.pathname === "/questions"}
+          />
+          <ButtonNav title={"Rozszerzenie"} href={"/"} disabled />
         </ul>
       </nav>
-      <section
-        className={
-          "flex justify-between items-center bg-white px-3 h-8 w-fit rounded-full gap-x-1 min-w-full border border-dashed border-muted"
-        }
-      >
-        <div className={"flex gap-x-1 items-center"}>
-          <ButtonFilter filter={"period"}>Epoka</ButtonFilter>
-          <ButtonFilter filter={"motive"}>Motyw</ButtonFilter>
-          <ButtonFilter filter={"author"}>Autor</ButtonFilter>
-        </div>
-        <div className={"flex gap-x-2 items-center"}>
-          {Object.entries(statusesObj).map(([key, value]) => {
-            return (
-              <TooltipProvider key={key}>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Button
-                      onClick={() => {
-                        setStatus(
-                          status === value.status ? null : value.status,
-                        );
-                      }}
-                      key={key}
-                      variant={"ghost"}
-                      size={"icon"}
-                      className={cn(
-                        "cursor-pointer size-6",
-                        status === value.status &&
-                          "bg-accent text-accent-foreground",
-                      )}
-                    >
-                      <value.icon className={"size-4"} />
-                    </Button>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>{value.text}</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-            );
-          })}
-          <Button
-            onClick={() => {
-              setView(view === "list" ? "grid" : "list");
-            }}
-            className={"cursor-pointer size-6"}
-            variant={"ghost"}
-            size={"icon"}
-          >
-            {view === "list" ? (
-              <GridIcon className={"size-4"} />
-            ) : (
-              <ListIcon className={"size-4"} />
-            )}
-          </Button>
-        </div>
-      </section>
     </div>
   );
 }
 
-function ButtonNav({ children }: { children: string }) {
-  return (
-    <Button className={"hover:cursor-pointer rounded-xl"} variant={"ghost"}>
-      {children}
-    </Button>
-  );
-}
-
-function ButtonFilter({
-  children,
-  filter,
+function ButtonNav({
+  title,
+  href,
+  disabled = false,
+  active = false,
 }: {
-  children: string;
-  filter: DataStore["groupBy"];
+  title: string;
+  href: string;
+  disabled?: boolean;
+  active?: boolean;
 }) {
-  const { groupByField, groupBy } = useDataStore();
   return (
-    <Button
-      onClick={() => {
-        if (groupBy === filter) {
-          groupByField(null);
-        } else {
-          groupByField(filter);
-        }
-      }}
-      className={cn(
-        "hover:cursor-pointer h-6 rounded-xl",
-        groupBy === filter && "bg-accent text-accent-foreground",
-      )}
-      variant={"ghost"}
-      size={"sm"}
-    >
-      {children}
-    </Button>
+    <Link to={href}>
+      <Button
+        disabled={disabled}
+        className={cn(
+          "hover:cursor-pointer rounded-full",
+          active && "bg-primary text-primary-foreground",
+        )}
+        variant={"ghost"}
+      >
+        {title}
+      </Button>
+    </Link>
   );
 }

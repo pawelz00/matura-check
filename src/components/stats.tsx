@@ -2,59 +2,75 @@ import { useDataStore } from "@/store/useDataStore.ts";
 import { useMemo } from "react";
 import { Badge } from "@/components/ui/badge.tsx";
 import Counter from "@/components/counter.tsx";
+import { statusesObj } from "@/constants/statusesObject.ts";
+import { useFiltersStore } from "@/store/useFiltersStore.ts";
+import { cn } from "@/lib/utils.ts";
 
 type Stats = {
-  numberOfCompletedItems: number;
+  learned: number;
+  inProgress: number;
   review: number;
   notStarted: number;
 };
 
-export default function Stats() {
-  const { statuses } = useDataStore();
+export type StatsProps = {
+  mode?: "questions" | "default";
+};
+
+export default function Stats({ mode = "default" }: StatsProps) {
+  const { statuses, questionsStatuses } = useDataStore();
+  const { status, setStatus } = useFiltersStore();
 
   const stats: Stats = useMemo(() => {
-    return Object.values(statuses).reduce(
+    return Object.values(
+      mode === "default" ? statuses : questionsStatuses,
+    ).reduce(
       (acc, status) => {
         if (status === "learned") {
-          acc.numberOfCompletedItems += 1;
+          acc.learned += 1;
         } else if (status === "review") {
           acc.review += 1;
         } else if (status === "notStarted") {
           acc.notStarted += 1;
+        } else if (status === "inProgress") {
+          acc.inProgress += 1;
         }
         return acc;
       },
       {
-        numberOfCompletedItems: 0,
+        learned: 0,
         review: 0,
         notStarted: 0,
+        inProgress: 0,
       },
     );
-  }, [statuses]);
+  }, [statuses, questionsStatuses]);
 
   return (
     <section
-      className={
-        "w-full flex items-center border justify-between rounded-full bg-white"
-      }
+      className={"w-full flex flex-wrap gap-3 items-center justify-between p-3"}
     >
-      <div className={"flex divide-x text-sm"}>
-        <div className={"flex gap-x-2 items-center px-4 py-1.5"}>
-          <span>Lektury przyswojone:</span>
-          <Badge variant={"outline"}>{stats.numberOfCompletedItems}</Badge>
-        </div>
-        <div className={"flex gap-x-2 items-center px-4 py-1.5"}>
-          <span>Do powtórki:</span>
-          <Badge variant={"outline"}>{stats.review}</Badge>
-        </div>
-        <div className={"flex gap-x-2 items-center px-4 py-1.5"}>
-          <span>Do nauczenia:</span>
-          <Badge variant={"outline"}>{stats.notStarted}</Badge>
-        </div>
+      <div className={"flex flex-wrap gap-y-1.5 text-sm gap-x-3"}>
+        {Object.values(statusesObj).map((item) => (
+          <Badge
+            className={cn(
+              `cursor-pointer ${item.hoverColor} min-w-28`,
+              status === item.status && `${item.bgColor}`,
+            )}
+            variant={"outline"}
+            key={item.text}
+            onClick={() => {
+              setStatus(status === item.status ? null : item.status);
+            }}
+          >
+            <item.icon className={item.textColor} />
+            <span>
+              {item.text}: {stats?.[item.status] ?? 0}
+            </span>
+          </Badge>
+        ))}
       </div>
-      <div className={"px-4"}>
-        <Counter />
-      </div>
+      <Counter />
     </section>
   );
 }

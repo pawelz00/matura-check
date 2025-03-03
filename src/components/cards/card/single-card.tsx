@@ -1,7 +1,7 @@
 import { Item } from "@/data/data.ts";
 import { Card } from "@/components/ui/card.tsx";
-import CardHead from "@/components/card/card-header.tsx";
-import CardBody from "@/components/card/card-body.tsx";
+import CardHead from "@/components/cards/card/card-header.tsx";
+import CardBody from "@/components/cards/card/card-body.tsx";
 
 type SingleCardProps = {
   item: Item;
