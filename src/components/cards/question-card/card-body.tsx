@@ -61,7 +61,7 @@ export default function CardBody({ item }: { item: QuestionsData }) {
           );
         })}
       </div>
-      {view === "grid" && index !== (item?.questions?.length ?? 0 - 1) && (
+      {view === "grid" && index !== (item?.questions?.length ?? 0) - 1 && (
         <Separator />
       )}
     </CardContent>

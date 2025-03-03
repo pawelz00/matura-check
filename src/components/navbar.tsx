@@ -6,8 +6,8 @@ export default function Navbar() {
   const location = useLocation();
 
   return (
-    <div className={"w-fit mx-auto py-6 sticky top-0 z-[99999]"}>
-      <nav>
+    <div className={"w-full bg-background mx-auto py-6 sticky top-0 z-[99999]"}>
+      <nav className={"w-fit mx-auto"}>
         <ul
           className={
             "flex justify-between items-center bg-card px-1.5 h-12 rounded-full gap-x-1.5 border border-dotted"

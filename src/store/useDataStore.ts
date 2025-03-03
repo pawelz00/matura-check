@@ -25,6 +25,7 @@ export interface DataStore {
     status: Status,
   ) => void;
   loadStatuses: () => void;
+  loadQuestionStatuses: () => void;
 }
 
 export const useDataStore = create<DataStore>((set) => {
@@ -82,10 +83,31 @@ export const useDataStore = create<DataStore>((set) => {
       const stored = JSON.parse(
         localStorage.getItem("learningStatuses") || "{}",
       );
-      const storedQuestions = JSON.parse(
+
+      if (Object.keys(stored).length === 0) {
+        appData.forEach((item) => {
+          stored[item.id] = "notStarted";
+        });
+      }
+
+      set({ statuses: stored });
+    },
+    loadQuestionStatuses: () => {
+      const stored = JSON.parse(
         localStorage.getItem("questionStatuses") || "{}",
       );
-      set({ statuses: stored, questionsStatuses: storedQuestions });
+
+      if (Object.keys(stored).length === 0) {
+        appData.forEach((item) => {
+          if (item.questions) {
+            item.questions.forEach((q) => {
+              stored[`${item.id}-${q.id}`] = "notStarted";
+            });
+          }
+        });
+      }
+
+      set({ questionsStatuses: stored });
     },
 
     groupByField: (field) =>

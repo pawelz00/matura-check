@@ -1,12 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
 import InfoBar from "@/components/info-bar.tsx";
 import QuestionCards from "@/components/cards/question-cards.tsx";
+import { useDataStore } from "@/store/useDataStore.ts";
+import { useEffect } from "react";
 
 export const Route = createFileRoute("/questions")({
   component: Questions,
 });
 
 function Questions() {
+  const { loadQuestionStatuses } = useDataStore();
+
+  useEffect(() => {
+    loadQuestionStatuses();
+  }, []);
+
   return (
     <div
       className={

@@ -10,7 +10,7 @@ export default function InfoBar({ mode, showButtonFilters }: InfoBarProps) {
   return (
     <div
       className={
-        "border rounded-lg w-full flex flex-col bg-white sticky top-20"
+        "border rounded-lg w-full flex flex-col bg-white sticky top-20 z-[99999]"
       }
     >
       <Filters showButtonFilters={showButtonFilters} />

@@ -13,7 +13,7 @@ function Index() {
 
   useEffect(() => {
     loadStatuses();
-  }, [loadStatuses]);
+  }, []);
 
   return (
     <div
