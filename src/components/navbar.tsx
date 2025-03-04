@@ -6,7 +6,7 @@ export default function Navbar() {
   const location = useLocation();
 
   return (
-    <div className={"w-full bg-background mx-auto py-6 sticky top-0 z-[99999]"}>
+    <div className={"w-full bg-background mx-auto py-6 sticky top-0 z-[49]"}>
       <nav
         className={
           "px-2 md:px-0 md:w-3/4 xl:2/3 2xl:w-1/2 relative mx-auto flex items-center justify-between"
