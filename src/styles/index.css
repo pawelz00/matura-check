@@ -6,11 +6,20 @@ body {
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "MoonDance";
+  src: url("../assets/fonts/MoonDance-Regular.ttf") format("truetype");
+}
+
 * {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color-scheme: light dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+}
+
+h1 {
+    font-family: "MoonDance", sans-serif;
 }
 
 :root {
