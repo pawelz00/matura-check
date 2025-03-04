@@ -20,6 +20,19 @@ export default function CardBody({ item }: { item: Item }) {
           <h3 className="text-md font-medium text-card-foreground">Motywy</h3>
           <div className="flex flex-wrap gap-2.5">
             {item?.questions?.map((item) => {
+              if (item.url) {
+                return (
+                  <Badge
+                    variant={"accent"}
+                    key={item.question}
+                    className={"whitespace-pre-wrap"}
+                  >
+                    <a href={item.url} target={"_blank"} rel={"noreferrer"}>
+                      {item.motive}
+                    </a>
+                  </Badge>
+                );
+              }
               return (
                 <Badge
                   variant={"accent"}

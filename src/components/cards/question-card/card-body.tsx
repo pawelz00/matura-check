@@ -28,7 +28,20 @@ export default function CardBody({ item }: { item: QuestionsData }) {
       )}
     >
       <div>
-        <h3 className="text-md font-medium text-card-foreground">{q.motive}</h3>
+        <h3 className="text-md font-medium text-card-foreground">
+          {q.url ? (
+            <a
+              href={q.url}
+              target="_blank"
+              className="hover:underline"
+              rel="noreferrer"
+            >
+              {q.motive}
+            </a>
+          ) : (
+            q.motive
+          )}
+        </h3>
         <p className="text-sm text-card-foreground/65">{q.question}</p>
       </div>
       <div className="flex gap-3">

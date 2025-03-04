@@ -2,6 +2,7 @@ export type Question = {
   id: number;
   motive: string;
   question: string;
+  url?: string;
 };
 
 export type Questions = Question[];
@@ -56,18 +57,21 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Cierpienie niezawinione",
+        url: "https://www.otouczelnie.pl/artykul/33741/Motyw-cierpienia-niezawinionego",
         question:
           "Omów zagadnienie na podstawie znanych Ci fragmentów Księgi Hioba. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 2,
-        motive: "Niestałość świata",
+        motive: "Człowiek wobec niestałości świata",
+        url: "https://www.otouczelnie.pl/artykul/33745/Czlowiek-wobec-niestalosci-swiata",
         question:
           "Omów zagadnienie na podstawie znanych Ci fragmentów Księgi Koheleta. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 3,
-        motive: "Koniec świata",
+        motive: "Wizja końca świata",
+        url: "https://www.otouczelnie.pl/artykul/33746/Wizja-konca-swiata",
         question:
           "Omów zagadnienie na podstawie znanych Ci fragmentów Apokalipsy św. Jana. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -84,18 +88,21 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Poświęcenie w imię wyższych wartości",
+        url: "https://www.otouczelnie.pl/artykul/33747/Poswiecenie-sie-w-imie-wyzszych-wartosci",
         question:
           "Omów zagadnienie na podstawie Mitologii (cz. I Grecja) Jana Parandowskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 2,
         motive: "Wina i kara",
+        url: "https://www.otouczelnie.pl/artykul/33748/Problematyka-winy-i-kary",
         question:
           "Omów zagadnienie na podstawie Mitologii (cz. I Grecja) Jana Parandowskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 3,
         motive: "Miłość silniejsza niż śmierć",
+        url: "https://www.otouczelnie.pl/artykul/33749/Milosc-silniejsza-niz-smierc",
         question:
           "Omów zagadnienie na podstawie Mitologii (cz. I Grecja) Jana Parandowskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -140,6 +147,7 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Heroizm",
+        url: "https://www.otouczelnie.pl/artykul/33750/Heroizm-jako-postawa-czlowieka-w-zmaganiu-sie-z-losem",
         question:
           "Omów zagadnienie na podstawie znanych Ci fragmentów Iliady Homera. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -208,12 +216,14 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Konflikt racji moralnych",
+        url: "https://www.otouczelnie.pl/artykul/33751/Konflikt-racji-moralnych",
         question:
           "Omów zagadnienie na podstawie Antygony Sofoklesa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 2,
         motive: "Człowiek wobec przeznaczenia",
+        url: "https://www.otouczelnie.pl/artykul/33752/Czlowiek-wobec-przeznaczenia",
         question:
           "Omów zagadnienie na podstawie Antygony Sofoklesa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -262,6 +272,7 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Taniec śmierci",
+        url: "https://www.otouczelnie.pl/artykul/33753/Motyw-tanca-smierci",
         question:
           "Omów zagadnienie na podstawie znanych Ci fragmentów Rozmowy Mistrza Polikarpa ze Śmiercią. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -305,6 +316,7 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Etos rycerski",
+        url: "https://www.otouczelnie.pl/artykul/33754/Sredniowieczny-etos-rycerski",
         question:
           "Omów zagadnienie na podstawie znanych Ci fragmentów Pieśni o Rolandzie. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -348,18 +360,21 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Moralna odpowiedzialność za czyny",
+        url: "https://www.otouczelnie.pl/artykul/33755/Moralna-odpowiedzialnosc-za-czyny",
         question:
           "Omów zagadnienie na podstawie Makbeta Williama Szekspira. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 2,
         motive: "Czy człowiek decyduje o własnym losie?",
+        url: "https://www.otouczelnie.pl/artykul/33756/Czy-czlowiek-decyduje-o-wlasnym-losie",
         question:
           "Omów zagadnienie na podstawie Makbeta Williama Szekspira. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 3,
         motive: "Wpływ władzy na człowieka",
+        url: "https://www.otouczelnie.pl/artykul/33757/Jaki-wplyw-na-czlowieka-ma-sprawowanie-przez-niego-wladzy",
         question:
           "Omów zagadnienie na podstawie Makbeta Williama Szekspira. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -403,12 +418,14 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Czy dobra materialne czynią człowieka szczęśliwym?",
+        url: "https://www.otouczelnie.pl/artykul/33758/Czy-dobra-materialne-czynia-czlowieka-szczesliwym",
         question:
           "Omów zagadnienie na podstawie Skąpca Moliera. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 2,
         motive: "Przyczyny nieporozumień między rodzicami a dziećmi.",
+        url: "https://www.otouczelnie.pl/artykul/33759/Przyczyny-nieporozumien-miedzy-rodzicami-a-dziecmi",
         question:
           "Omów zagadnienie na podstawie Skąpca Moliera. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -452,6 +469,7 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Wady ludzkie w krzywym zwierciadle satyry.",
+        url: "https://www.otouczelnie.pl/artykul/33760/Wady-ludzkie-w-krzywym-zwierciadle-satyry",
         question:
           "Omów zagadnienie na podstawie wybranej satyry Ignacego Krasickiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -495,12 +513,14 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Świat ducha a świat rozumu.",
+        url: "https://www.otouczelnie.pl/artykul/33761/Swiat-ducha-a-swiat-rozumu",
         question:
           "Omów zagadnienie na podstawie Romantyczności Adama Mickiewicza. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 2,
         motive: "Jakie znaczenie dla człowieka ma przyroda?",
+        url: "https://www.otouczelnie.pl/artykul/33762/Jakie-znaczenie-dla-czlowieka-ma-przyroda",
         question:
           "Omów zagadnienie na podstawie znanych Ci ballad Adama Mickiewicza. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -544,36 +564,42 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Losy młodzieży polskiej pod zaborami.",
+        url: "https://www.otouczelnie.pl/artykul/33763/Losy-mlodziezy-polskiej-pod-zaborami",
         question:
           "Omów zagadnienie na podstawie Dziadów części III Adama Mickiewicza. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 2,
         motive: "Mesjanizm jako romantyczna idea poświęcenia.",
+        url: "https://www.otouczelnie.pl/artykul/33764/Mesjanizm-jako-romantyczna-idea-poswiecenia",
         question:
           "Omów zagadnienie na podstawie Dziadów części III Adama Mickiewicza. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 3,
         motive: "Postawy społeczeństwa polskiego wobec zaborcy.",
+        url: "https://www.otouczelnie.pl/artykul/33765/Postawy-spoleczenstwa-polskiego-wobec-zaborcy",
         question:
           "Omów zagadnienie na podstawie Dziadów części III Adama Mickiewicza. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 4,
         motive: "Różne postawy człowieka wobec Boga.",
+        url: "https://www.otouczelnie.pl/artykul/33766/Rozne-postawy-czlowieka-wobec-Boga",
         question:
           "Omów zagadnienie na podstawie Dziadów części III Adama Mickiewicza. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 5,
         motive: "Jakie prawdy o człowieku ujawniają jego sny albo widzenia?",
+        url: "https://www.otouczelnie.pl/artykul/33767/Jakie-prawdy-o-czlowieku-ujawniaja-jego-sny-albo-widzenia",
         question:
           "Omów zagadnienie na podstawie Dziadów części III Adama Mickiewicza. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 6,
         motive: "W jakim celu twórca nawiązuje do motywów biblijnych?",
+        url: "https://www.otouczelnie.pl/artykul/33768/W-jakim-celu-tworca-nawiazuje-do-motywow-biblijnych",
         question:
           "Omów zagadnienie na podstawie Dziadów części III Adama Mickiewicza. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -617,18 +643,21 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Miłość – siła destrukcyjna czy motywująca do działania?",
+        url: "https://www.otouczelnie.pl/artykul/33769/Milosc-sila-destrukcyjna-czy-motywujaca-do-dzialania",
         question:
           "Omów zagadnienie na podstawie Lalki Bolesława Prusa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 2,
         motive: "Różne oblicza przyjaźni",
+        url: "https://www.otouczelnie.pl/artykul/33770/Rozne-oblicza-przyjazni",
         question:
           "Omów zagadnienie na podstawie Lalki Bolesława Prusa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 3,
         motive: "Praca jako pasja człowieka",
+        url: "https://www.otouczelnie.pl/artykul/33771/Praca-jako-pasja-czlowieka",
         question:
           "Omów zagadnienie na podstawie Lalki Bolesława Prusa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -636,12 +665,14 @@ export const appData: Items = [
         id: 4,
         motive:
           "Jaką rolę w relacjach międzyludzkich odgrywają majątek i pochodzenie?",
+        url: "https://www.otouczelnie.pl/artykul/33772/Jaka-role-w-relacjach-miedzyludzkich-odgrywaja-majatek-i-pochodzenie",
         question:
           "Omów zagadnienie na podstawie Lalki Bolesława Prusa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 5,
         motive: "Konfrontacja marzeń z rzeczywistością",
+        url: "https://www.otouczelnie.pl/artykul/33773/Konfrontacja-marzen-z-rzeczywistoscia",
         question:
           "Omów zagadnienie na podstawie Lalki Bolesława Prusa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -649,12 +680,14 @@ export const appData: Items = [
         id: 6,
         motive:
           "Jakie cechy charakteru ułatwiają człowiekowi osiągnięcie celu?",
+        url: "https://www.otouczelnie.pl/artykul/33774/Jakie-cechy-charakteru-ulatwiaja-czlowiekowi-osiagniecie-celu",
         question:
           "Omów zagadnienie na podstawie Lalki Bolesława Prusa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 7,
         motive: "Miasto – przestrzeń przyjazna czy wroga człowiekowi?",
+        url: "https://www.otouczelnie.pl/artykul/33775/Miasto-przestrzen-przyjazna-czy-wroga-czlowiekowi",
         question:
           "Omów zagadnienie na podstawie Lalki Bolesława Prusa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -698,24 +731,28 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Walka człowieka ze swoimi słabościami",
+        url: "https://www.otouczelnie.pl/artykul/33777/Walka-czlowieka-ze-swoimi-slabosciami",
         question:
           "Omów zagadnienie na podstawie Zbrodni i kary Fiodora Dostojewskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 2,
         motive: "Motyw winy i kary",
+        url: "https://www.otouczelnie.pl/artykul/33778/Motyw-winy-i-kary",
         question:
           "Omów zagadnienie na podstawie Zbrodni i kary Fiodora Dostojewskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 3,
         motive: "Ile człowiek jest gotów poświęcić dla innych?",
+        url: "https://www.otouczelnie.pl/artykul/33779/Ile-czlowiek-jest-gotow-poswiecic-dla-innych",
         question:
           "Omów zagadnienie na podstawie Zbrodni i kary Fiodora Dostojewskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 4,
         motive: "Co może determinować ludzkie postępowanie?",
+        url: "https://www.otouczelnie.pl/artykul/33780/Co-moze-determinowac-ludzkie-postepowanie",
         question:
           "Omów zagadnienie na podstawie Zbrodni i kary Fiodora Dostojewskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -759,30 +796,35 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Trudności w porozumieniu między różnymi grupami społecznymi",
+        url: "https://www.otouczelnie.pl/artykul/33781/Co-utrudnia-porozumienie-miedzy-przedstawicielami-roznych-grup-spolecznych",
         question:
           "Co utrudnia porozumienie między przedstawicielami różnych grup społecznych? Omów zagadnienie na podstawie Wesela Stanisława Wyspiańskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 2,
         motive: "Rola chłopów i inteligencji w sprawie niepodległościowej",
+        url: "https://www.otouczelnie.pl/artykul/33782/Rola-chlopow-i-inteligencji-w-sprawie-niepodleglosciowej",
         question:
           "Rola chłopów i inteligencji w sprawie niepodległościowej. Omów zagadnienie na podstawie Wesela Stanisława Wyspiańskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 3,
         motive: "Sen o Polsce czy sąd nad Polską?",
+        url: "https://www.otouczelnie.pl/artykul/33783/Sen-o-Polsce-czy-sad-nad-Polska",
         question:
           "Sen o Polsce czy sąd nad Polską? Omów zagadnienie na podstawie Wesela Stanisława Wyspiańskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 4,
         motive: "Symboliczne znaczenie widm i zjaw",
+        url: "https://www.otouczelnie.pl/artykul/33784/Symboliczne-znaczenie-widm-i-zjaw",
         question:
           "Symboliczne znaczenie widm i zjaw. Omów zagadnienie na podstawie Wesela Stanisława Wyspiańskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 5,
         motive: "Motyw tańca",
+        url: "https://www.otouczelnie.pl/artykul/33785/Motyw-tanca",
         question:
           "Motyw tańca. Omów zagadnienie na podstawie Wesela Stanisława Wyspiańskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -827,24 +869,28 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Młodość jako czas kształtowania własnej tożsamości",
+        url: "https://www.otouczelnie.pl/artykul/33790/Mlodosc-jako-czas-ksztaltowania-wlasnej-tozsamosci",
         question:
           "Omów zagadnienie na podstawie Przedwiośnia Stefana Żeromskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 2,
         motive: "Wojna i rewolucja jako źródła doświadczeń człowieka",
+        url: "https://www.otouczelnie.pl/artykul/33788/Wojna-i-rewolucja-jako-zrodla-doswiadczen-czlowieka",
         question:
           "Omów zagadnienie na podstawie Przedwiośnia Stefana Żeromskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 3,
         motive: "Różne wizje odbudowy Polski po odzyskaniu niepodległości",
+        url: "https://www.otouczelnie.pl/artykul/33789/Rozne-wizje-odbudowy-Polski-po-odzyskaniu-niepodleglosci",
         question:
           "Omów zagadnienie na podstawie Przedwiośnia Stefana Żeromskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 4,
         motive: "Jakie znaczenie ma tytuł dla odczytania sensu utworu?",
+        url: "https://www.otouczelnie.pl/artykul/33787/Jakie-znaczenie-ma-tytul-dla-odczytania-sensu-utworu",
         question:
           "Omów zagadnienie na podstawie Przedwiośnia Stefana Żeromskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -924,18 +970,21 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Co skłania człowieka do poświęceń?",
+        url: "https://www.otouczelnie.pl/artykul/33811/Co-sklania-czlowieka-do-poswiecen",
         question:
           "Omów zagadnienie na podstawie Dżumy Alberta Camusa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 2,
         motive: "Człowiek wobec cierpienia i śmierci",
+        url: "https://www.otouczelnie.pl/artykul/33812/Czlowiek-wobec-cierpienia-i-smierci",
         question:
           "Omów zagadnienie na podstawie Dżumy Alberta Camusa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 3,
         motive: "Czy możliwa jest przyjaźń w sytuacjach skrajnych?",
+        url: "https://www.otouczelnie.pl/artykul/33813/Czy-mozliwa-jest-przyjazn-w-sytuacjach-skrajnych",
         question:
           "Omów zagadnienie na podstawie Dżumy Alberta Camusa. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -979,24 +1028,28 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Relacje międzyludzkie w rzeczywistości państwa totalitarnego",
+        url: "https://www.otouczelnie.pl/artykul/33814/Relacje-miedzyludzkie-w-rzeczywistosci-panstwa-totalitarnego",
         question:
           "Omów zagadnienie na podstawie utworu Rok 1984 George’a Orwella. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 2,
         motive: "Jak zachować wolność w państwie totalitarnym?",
+        url: "https://www.otouczelnie.pl/artykul/33815/Jak-zachowac-wolnosc-w-panstwie-totalitarnym",
         question:
           "Omów zagadnienie na podstawie utworu Rok 1984 George’a Orwella. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 3,
         motive: "Znaczenie propagandy w państwie totalitarnym",
+        url: "https://www.otouczelnie.pl/artykul/33816/Znaczenie-propagandy-w-panstwie-totalitarnym",
         question:
           "Omów zagadnienie na podstawie utworu Rok 1984 George’a Orwella. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 4,
         motive: "Nowomowa jako sposób na ograniczenie wolności człowieka",
+        url: "https://www.otouczelnie.pl/artykul/33817/Nowomowa-jako-sposob-na-ograniczenie-wolnosci-czlowieka",
         question:
           "Omów zagadnienie na podstawie utworu Rok 1984 George’a Orwella. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -1040,18 +1093,21 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Bunt przeciwko porządkowi społecznemu",
+        url: "https://www.otouczelnie.pl/artykul/33818/Bunt-przeciwko-porzadkowi-spolecznemu",
         question:
           "Omów zagadnienie na podstawie Tanga Sławomira Mrożka. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 2,
         motive: "Problem upadku wartości",
+        url: "https://www.otouczelnie.pl/artykul/33819/Problem-upadku-wartosci",
         question:
           "Omów zagadnienie na podstawie Tanga Sławomira Mrożka. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 3,
         motive: "Normy społeczne – ograniczają człowieka czy porządkują życie?",
+        url: "https://www.otouczelnie.pl/artykul/33820/Normy-spoleczne-ograniczaja-czlowieka-czy-porzadkuja-zycie",
         question:
           "Omów zagadnienie na podstawie Tanga Sławomira Mrożka. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -1095,12 +1151,14 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Godność w skrajnych sytuacjach",
+        url: "https://www.otouczelnie.pl/artykul/33809/Czy-mozliwe-jest-zachowanie-godnosci-w-skrajnych-sytuacjach",
         question:
           "Czy możliwe jest zachowanie godności w skrajnych sytuacjach? Omów zagadnienie na podstawie Zdążyć przed Panem Bogiem Hanny Krall. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 2,
         motive: "Zagłada z perspektywy świadka",
+        url: "https://www.otouczelnie.pl/artykul/33810/Zaglada-z-perspektywy-swiadka-i-uczestnika-wydarzen-w-getcie",
         question:
           "Zagłada z perspektywy świadka i uczestnika wydarzeń w getcie. Omów zagadnienie na podstawie Zdążyć przed Panem Bogiem Hanny Krall. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -1145,6 +1203,7 @@ export const appData: Items = [
         id: 1,
         motive:
           "W jakim celu autor nawiązuje w swoim tekście do innego tekstu?",
+        url: "https://www.otouczelnie.pl/artykul/33821/W-jakim-celu-autor-nawiazuje-w-swoim-tekscie-do-innego-tekstu",
         question:
           "Omów zagadnienie na podstawie utworu Górą „Edek” Marka Nowakowskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -1188,6 +1247,7 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Jaką wartość dla człowieka ma pamięć o przeszłości?",
+        url: "https://www.otouczelnie.pl/artykul/33822/Jaka-wartosc-dla-czlowieka-ma-pamiec-o-przeszlosci",
         question:
           "Omów zagadnienie na podstawie Miejsca Andrzeja Stasiuka. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -1231,6 +1291,7 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Stan wojenny z perspektywy obcokrajowca",
+        url: "https://www.otouczelnie.pl/artykul/33837/Stan-wojenny-z-perspektywy-obcokrajowca",
         question:
           "Omów zagadnienie na podstawie utworu Profesor Andrews w Warszawie Olgi Tokarczuk. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -1274,6 +1335,7 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Czym dla człowieka może być podróżowanie?",
+        url: "https://www.otouczelnie.pl/artykul/33839/Czym-dla-czlowieka-moze-byc-podrozowanie",
         question:
           "Omów zagadnienie na podstawie znanych Ci fragmentów Podróży z Herodotem Ryszarda Kapuścińskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -1317,12 +1379,14 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Groteskowy obraz świata",
+        url: "https://www.otouczelnie.pl/artykul/33792/Groteskowy-obraz-swiata",
         question:
           "Omów zagadnienie na podstawie znanych Ci fragmentów Ferdydurke Witolda Gombrowicza. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 2,
         motive: "Człowiek wobec presji otoczenia",
+        url: "https://www.otouczelnie.pl/artykul/33801/Czlowiek-wobec-presji-otoczenia",
         question:
           "Omów zagadnienie na podstawie znanych Ci fragmentów Ferdydurke Witolda Gombrowicza. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -1366,6 +1430,7 @@ export const appData: Items = [
       {
         id: 1,
         motive: "„Człowiek zlagrowany” jako ofiara zbrodniczego systemu",
+        url: "https://www.otouczelnie.pl/artykul/33803/Czlowiek-zlagrowany-jako-ofiara-zbrodniczego-systemu",
         question:
           "Omów zagadnienie na podstawie utworu Proszę państwa do gazu Tadeusza Borowskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -1409,12 +1474,14 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Jakie znaczenie ma tytuł dla odczytania sensu utworu?",
+        url: "https://www.otouczelnie.pl/artykul/33804/Jakie-znaczenie-ma-tytul-dla-odczytania-sensu-utworu",
         question:
           "Omów zagadnienie na podstawie znanych Ci fragmentów Innego świata Gustawa Herlinga-Grudzińskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
       {
         id: 2,
         motive: "Konsekwencje zniewolenia człowieka",
+        url: "https://www.otouczelnie.pl/artykul/33805/Konsekwencje-zniewolenia-czlowieka",
         question:
           "Omów zagadnienie na podstawie znanych Ci fragmentów Innego świata Gustawa Herlinga-Grudzińskiego. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -1458,6 +1525,7 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Obyczaj i tradycja w życiu społeczeństwa",
+        url: "https://www.otouczelnie.pl/artykul/33786/Obyczaj-i-tradycja-w-zyciu-spoleczenstwa",
         question:
           "Omów zagadnienie na podstawie znanych Ci fragmentów Chłopów Władysława Stanisława Reymonta. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
@@ -1501,6 +1569,7 @@ export const appData: Items = [
       {
         id: 1,
         motive: "Postawy odwagi i tchórzostwa",
+        url: "https://www.otouczelnie.pl/artykul/33776/Postawy-odwagi-i-tchorzostwa",
         question:
           "Omów zagadnienie na podstawie znanych Ci fragmentów Potopu Henryka Sienkiewicza. W swojej odpowiedzi uwzględnij również wybrany kontekst.",
       },
