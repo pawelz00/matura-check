@@ -2,6 +2,7 @@ import { FileQuestion, Filter } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useFiltersStore } from "@/store/useFiltersStore.ts";
+import { memo } from "react";
 
 interface EmptyStateProps {
   title?: string;
@@ -9,7 +10,7 @@ interface EmptyStateProps {
   showResetButton?: boolean;
 }
 
-export default function EmptyState({
+function EmptyState({
   title = "Nie znaleziono",
   description = "Spróbuj zmienić kryteria wyszukiwania lub filtry, aby zobaczyć więcej wyników.",
   showResetButton = true,
@@ -45,3 +46,5 @@ export default function EmptyState({
     </Card>
   );
 }
+
+export default memo(EmptyState);

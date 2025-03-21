@@ -10,8 +10,9 @@ import { Button } from "@/components/ui/button.tsx";
 import { cn } from "@/lib/utils.ts";
 import { useFiltersStore } from "@/store/useFiltersStore.ts";
 import { Separator } from "@/components/ui/separator.tsx";
+import { memo } from "react";
 
-export default function CardBody({ item }: { item: QuestionsData }) {
+function CardBody({ item }: { item: QuestionsData }) {
   const { questionsStatuses, setQuestionsStatus } = useDataStore();
   const { view } = useFiltersStore();
 
@@ -80,3 +81,5 @@ export default function CardBody({ item }: { item: QuestionsData }) {
     </CardContent>
   ));
 }
+
+export default memo(CardBody);
